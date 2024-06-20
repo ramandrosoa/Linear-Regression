@@ -27,7 +27,7 @@ $A_i$ is a random variable normally and independently distributed.
 Given the simple linear regression model with first-order autoregressive
 errors :
 
-$y_i = B_0 + B_1x_i + Ei$ where the error terms can be expressed as
+$y_i = B_0 + B_1x_i + E_i$ where the error terms can be expressed as
 follow : $E_i = \phi E_{i-1} + A_i$
 
 $y_i$ and $x_i$ are the observed values of the response and predictor
