@@ -132,7 +132,7 @@ $E_{i+1}$ = $\phi E_{i} + A_i$ , $A_i \sim N(0,\sigma^2)$
 
 This relationship resembles a typical linear regression form:
 
-$y_i$ = $B_1 x_{i} + E_i$ , $E_i$ ~$N(0,\sigma^2)$
+$y_i$ = $B_1 x_{i} + E_i$ , $E_i \sim N(0,\sigma^2)$
 
 We can estimate $\phi$ by using the Ordinary Least Squares regression to
 approximate the slope :
