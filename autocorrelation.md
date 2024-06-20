@@ -126,7 +126,7 @@ Let us express $d$ as a function of the correlation coefficient $\phi$.
 
 Recall:
 
-$E_{i+1}$ = $\phi E_{i} + A_i$ , $A_i$ ~$N(0,\sigma^2)$
+$E_{i+1}$ = $\phi E_{i} + A_i$ , $A_i \sim N(0,\sigma^2)$
 
 This relationship resembles a typical linear regression form:
 
@@ -142,20 +142,20 @@ $$
 We know that the expected value of the error terms $E_i$ is 0 then :
 
 $$
-\hat{\phi} = \frac{\sum_{i=1}^{n}E_iE_{i+1}}{\sum_{i=1}^{n}E_i^2}
+\hat{\phi} = \frac{\sum_{i=1}^{n} E_iE_{i+1}}{\sum_{i=1}^{n} E_i^2}
 $$
 
 The developed form of the Durbin-Watson statistic is as follow :
 
 $$
-d = \frac{\sum_{i=1}^{n}(E_{i}^2-2E_iE_{i+1}+E_{i+1}^2)}{\sum_{i=1}^{n} E_i^2}
+d = \frac{\sum_{i=1}^{n} (E_{i}^2-2E_iE_{i+1}+E_{i+1}^2)}{\sum_{i=1}^{n} E_i^2}
 $$
 
 $$
-d = \frac{\sum_{i=1}^{n}(E_{i+1}^2)}{\sum_{i=1}^{n} E_i^2} + \frac{\sum_{i=1}^{n}(E_{i}^2)}{\sum_{i=1}^{n} E_i^2} -\frac{\sum_{i=1}^{n}(2E_iE_{i+1})}{\sum_{i=1}^{n} E_i^2}
+d = \frac{\sum_{i=1}^{n} (E_{i+1}^2)}{\sum_{i=1}^{n}  E_i^2} + \frac{\sum_{i=1}^{n} (E_{i}^2)}{\sum_{i=1}^{n}  E_i^2} -\frac{\sum_{i=1}^{n} (2E_iE_{i+1})}{\sum_{i=1}^{n}  E_i^2}
 $$
 
-For large n , ${\sum_{i=1}^{n}(E_{i+1}^2)}\approx\sum_{i=1}^{n} E_i^2$
+For large n , ${\sum_{i=1}^{n} (E_{i+1}^2)}\approx\sum_{i=1}^{n} E_i^2$
 
 Then , we get :
 
@@ -164,7 +164,7 @@ d\approx 2  -\frac{\sum_{i=1}^{n}(2E_iE_{i+1})}{\sum_{i=1}^{n} E_i^2}
 $$
 
 $$
-d\approx 2(1-\frac{\sum_{i=1}^{n}E_iE_{i+1}}{\sum_{i=1}^{n} E_i^2})
+d\approx 2(1-\frac{\sum_{i=1}^{n} E_iE_{i+1}}{\sum_{i=1}^{n} E_i^2})
 $$
 
 $$
@@ -268,8 +268,8 @@ uncorrelated residuals.
 
 Starting with the initial linear regressio model :
 
-$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$, where $A_i$
-~NID(0,$\sigma^2$)
+$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i$
+~NID(0, $\sigma^2$ )
 
 By substituting :
 
