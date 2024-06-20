@@ -49,7 +49,7 @@ term are constant over time, then $$
 Var(E_{i-1}) = Var(E_i) = Var(E_{i+1}) = ... 
 $$
 
-Recall $E_i = \phi E_{i-1} + A_i$ where $A_i$~$N(0,\sigma^2)$
+Recall $E_i = \phi E_{i-1} + A_i$ where $A_i\sim N(0,\sigma^2)$
 
 We can rewrite $Var(Ei) = Var(\phi E_{i-1} + A_i)$
 
@@ -119,7 +119,7 @@ The Durbin-Watson Test only checks for autocorrelation with a lag of 1.
 Given the Durbin-Watson test statistic :
 
 $$
-d = \frac{\sum_{i=1}^{n}(E_{i+1}-E_{i})^2}{\sum_{i=1}^{n} E_i^2}
+d = \frac{\sum_ {i=1}^{n}(E_{i+1}-E_{i})^2}{\sum_{i=1}^{n} E_i^2}
 $$
 
 Let us express $d$ as a function of the correlation coefficient $\phi$.
@@ -283,7 +283,9 @@ Thus,
 
 $$
 y_i' = B_0 (1-\phi) + B_1x_i' + A_i
-$$ Here, $A_i$ represents residuals that are uncorrelated and exhibit
+$$
+
+Here, $A_i$ represents residuals that are uncorrelated and exhibit
 constant variance (white noise).
 
 Additionally, $B_0' = B_0 (1-\phi)$ represents the transformed y
