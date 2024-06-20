@@ -255,19 +255,22 @@ To address to this autocorrelation issue, we will to perform an
 appropriate transformation of variables.
 
 Recall $y_i$ and $x_i$ are the observations of the response and
-predictor variables at time $i$, let us define new variables $y'$ and
-$x'$ as follows :
+predictor variables at time $i$, let us define new variables $y_i'$ :
 
 $$
 y_i' = y_i - \phi y_{i-1}
-$$ $$
+$$
+
+and $x_i'$:
+
+$$
 x_i' = x_i - \phi x_{i-1}
 $$
 
 We will demonstrate how these transformations lead to a new model with
 uncorrelated residuals.
 
-Starting with the initial linear regressio model :
+Starting with the initial linear regression model :
 
 $y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i$
 ~NID(0, $\sigma^2$ )
