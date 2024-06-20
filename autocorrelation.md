@@ -46,6 +46,7 @@ $$
 
 Assume the stationarity process where the mean and variance of the error
 term are constant over time, then 
+
 $$
 Var(E_{i-1}) = Var(E_i) = Var(E_{i+1}) = ... 
 $$
