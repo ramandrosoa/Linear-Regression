@@ -136,35 +136,36 @@ We can estimate $\phi$ by using the Ordinary Least Squares regression to
 approximate the slope :
 
 $$
-\hat{\phi}  = \frac{\sum_{i=1}^{n}(E_i - \bar{E})(E_{i+1} - \bar{E})}{\sum_{i=1}^{n}(E_i - \bar{E})^2}
+\hat{\phi}  = \frac{\Sigma_{i=1}^{n}(E_i - \bar{E})(E_{i+1} - \bar{E})}{\Sigma_{i=1}^{n}(E_i - \bar{E})^2}
 $$
 
 We know that the expected value of the error terms $E_i$ is 0 then :
 
 $$
-\hat{\phi} = \frac{\sum_{i=1}^{n} E_iE_{i+1}}{\sum_{i=1}^{n} E_i^2}
+\hat{\phi} = \frac{\Sigma_{i=1}^{n} E_iE_{i+1}}{\Sigma_{i=1}^{n} E_i^2}
 $$
 
 The developed form of the Durbin-Watson statistic is as follow :
 
 $$
-d = \frac{\sum_{i=1}^{n} (E_{i}^2-2E_iE_{i+1}+E_{i+1}^2)}{\sum_{i=1}^{n} E_i^2}
+d = \frac{\Sigma_{i=1}^{n} (E_{i}^2-2E_iE_{i+1}+E_{i+1}^2)}{\Sigma_{i=1}^{n} E_i^2}
 $$
 
 $$
-d = \frac{\sum_{i=1}^{n} (E_{i+1}^2)}{\sum_{i=1}^{n}  E_i^2} + \frac{\sum_{i=1}^{n} (E_{i}^2)}{\sum_{i=1}^{n}  E_i^2} -\frac{\sum_{i=1}^{n} (2E_iE_{i+1})}{\sum_{i=1}^{n}  E_i^2}
+d = \frac{\Sigma_{i=1}^{n} (E_{i+1}^2)}{\Sigma_{i=1}^{n}  E_i^2} + \frac{\Sigma_{i=1}^{n} (E_{i}^2)}{\Sigma_{i=1}^{n}  E_i^2} -\frac{\Sigma_{i=1}^{n} (2E_iE_{i+1})}{\Sigma_{i=1}^{n}  E_i^2}
 $$
 
-For large n , ${\sum_{i=1}^{n} (E_{i+1}^2)}\approx\sum_{i=1}^{n} E_i^2$
+For large n ,
+${\Sigma_{i=1}^{n} (E_{i+1}^2)}\approx\Sigma_{i=1}^{n} E_i^2$
 
 Then , we get :
 
 $$
-d\approx 2  -\frac{\sum_{i=1}^{n}(2E_iE_{i+1})}{\sum_{i=1}^{n} E_i^2} 
+d\approx 2  -\frac{\Sigma_{i=1}^{n}(2E_iE_{i+1})}{\Sigma_{i=1}^{n} E_i^2} 
 $$
 
 $$
-d\approx 2(1-\frac{\sum_{i=1}^{n} E_iE_{i+1}}{\sum_{i=1}^{n} E_i^2})
+d\approx 2(1-\frac{\Sigma_{i=1}^{n} E_iE_{i+1}}{\Sigma_{i=1}^{n} E_i^2})
 $$
 
 $$
