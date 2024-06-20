@@ -274,7 +274,7 @@ uncorrelated residuals.
 
 Starting with the initial linear regression model :
 
-$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i\sim (0, $\sigma^2$ )
+$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i\sim (0, \sigma^2)$
 
 By substituting :
 
