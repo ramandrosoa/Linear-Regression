@@ -45,7 +45,8 @@ Corr(E_i, E_{i-1}) = \frac{Cov(E_{i-1}, E_i)} {\sqrt{Var(E_i)}\sqrt{Var(E_{i-1}}
 $$
 
 Assume the stationarity process where the mean and variance of the error
-term are constant over time, then $$
+term are constant over time, then 
+$$
 Var(E_{i-1}) = Var(E_i) = Var(E_{i+1}) = ... 
 $$
 
