@@ -248,7 +248,7 @@ Lag 0 represents the correlation of a residual with itself, then it is
 always taken as one.
 
 If there is autocorrelation, the vertical bars would quickly drop to
-almost zero or at least between or ear the blue line.
+almost zero or at least between or near the blue line.
 
 For instance, we can conclude that the residuals are correlated but the
 correlation ceases after lag 5.
@@ -274,8 +274,7 @@ uncorrelated residuals.
 
 Starting with the initial linear regression model :
 
-$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i$
-~NID(0, $\sigma^2$ )
+$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i\sim (0, $\sigma^2$ )
 
 By substituting :
 
