@@ -108,7 +108,9 @@ The lag one autocorrelation is given by :
 
 $$
 p_1 = Corr(E_i, E_{i-1}) 
-$$ $$
+$$
+
+$$
 p_1= \phi
 $$
 
@@ -118,8 +120,9 @@ Given the Durbin-Watson test statistic :
 
 $$
 d = \frac{\sum_{i=1}^{n}(E_{i+1}-E_{i})^2}{\sum_{i=1}^{n} E_i^2}
-$$ Let us express $d$ as a function of the correlation coefficient
-$\phi$.
+$$
+
+Let us express $d$ as a function of the correlation coefficient $\phi$.
 
 Recall:
 
@@ -134,7 +137,9 @@ approximate the slope :
 
 $$
 \hat{\phi}  = \frac{\sum_{i=1}^{n}(E_i - \bar{E})(E_{i+1} - \bar{E})}{\sum_{i=1}^{n}(E_i - \bar{E})^2}
-$$ We know that the expected value of the error terms $E_i$ is 0 then :
+$$
+
+We know that the expected value of the error terms $E_i$ is 0 then :
 
 $$
 \hat{\phi} = \frac{\sum_{i=1}^{n}E_iE_{i+1}}{\sum_{i=1}^{n}E_i^2}
@@ -144,20 +149,29 @@ The developed form of the Durbin-Watson statistic is as follow :
 
 $$
 d = \frac{\sum_{i=1}^{n}(E_{i}^2-2E_iE_{i+1}+E_{i+1}^2)}{\sum_{i=1}^{n} E_i^2}
-$$ $$
+$$
+
+$$
 d = \frac{\sum_{i=1}^{n}(E_{i+1}^2)}{\sum_{i=1}^{n} E_i^2} + \frac{\sum_{i=1}^{n}(E_{i}^2)}{\sum_{i=1}^{n} E_i^2} -\frac{\sum_{i=1}^{n}(2E_iE_{i+1})}{\sum_{i=1}^{n} E_i^2}
-$$ For large n ,
-${\sum_{i=1}^{n}(E_{i+1}^2)}\approx\sum_{i=1}^{n} E_i^2$
+$$
+
+For large n , ${\sum_{i=1}^{n}(E_{i+1}^2)}\approx\sum_{i=1}^{n} E_i^2$
 
 Then , we get :
 
 $$
 d\approx 2  -\frac{\sum_{i=1}^{n}(2E_iE_{i+1})}{\sum_{i=1}^{n} E_i^2} 
-$$ $$
+$$
+
+$$
 d\approx 2(1-\frac{\sum_{i=1}^{n}E_iE_{i+1}}{\sum_{i=1}^{n} E_i^2})
-$$ $$
+$$
+
+$$
 d\approx 2(1-\hat{\phi})
-$$ When $d$ tends to 2, we will have no autocorrelation as
+$$
+
+When $d$ tends to 2, we will have no autocorrelation as
 $\hat{\phi} \approx 0$
 
 When $d$ tends to 0, hence $\hat{\phi} \approx 1$, we will have a
@@ -323,6 +337,6 @@ dwtest(model2)
 
 The test statistic d is now closer to 2, which suggests a correlation
 coefficient $\phi \approx 0$. In addition, the p-value is greater than
-the significance level of 0,05,then we fail to reject the null
+the significance level of 0.05,then we fail to reject the null
 hypothesis $H_0 : \phi$ = 0 and we conclude that the errors $E_i$ are
 not correlated.
