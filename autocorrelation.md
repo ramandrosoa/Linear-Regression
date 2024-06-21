@@ -5,7 +5,7 @@ Minah Ramandrosoa
 
 In linear regression, correlated error terms can introduce bias and
 inconsistency into the Ordinary Least Squares estimates of the
-regression coefficients, thereby comprimising predictive performance of
+regression coefficients, thereby compromising predictive performance of
 the model.
 
 Autocorrelation occurs when the errors terms $E_i$ and $E_j$ are
