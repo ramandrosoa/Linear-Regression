@@ -27,7 +27,7 @@ $A_i$ is a random variable normally and independently distributed.
 Given the simple linear regression model with first-order autoregressive
 errors :
 
-$y_i = B_0 + B_1x_i + Ei$ where the error terms can be expressed as
+$y_i = B_0 + B_1x_i + E_i$ where the error terms can be expressed as
 follow : $E_i = \phi E_{i-1} + A_i$
 
 $y_i$ and $x_i$ are the observed values of the response and predictor
@@ -45,7 +45,9 @@ Corr(E_i, E_{i-1}) = \frac{Cov(E_{i-1}, E_i)} {\sqrt{Var(E_i)}\sqrt{Var(E_{i-1}}
 $$
 
 Assume the stationarity process where the mean and variance of the error
-term are constant over time, then $$
+term are constant over time, then 
+
+$$
 Var(E_{i-1}) = Var(E_i) = Var(E_{i+1}) = ... 
 $$
 
@@ -130,7 +132,7 @@ $E_{i+1}$ = $\phi E_{i} + A_i$ , $A_i \sim N(0,\sigma^2)$
 
 This relationship resembles a typical linear regression form:
 
-$y_i$ = $B_1 x_{i} + E_i$ , $E_i$ ~$N(0,\sigma^2)$
+$y_i$ = $B_1 x_{i} + E_i$ , $E_i \sim N(0,\sigma^2)$
 
 We can estimate $\phi$ by using the Ordinary Least Squares regression to
 approximate the slope :
@@ -246,7 +248,7 @@ Lag 0 represents the correlation of a residual with itself, then it is
 always taken as one.
 
 If there is autocorrelation, the vertical bars would quickly drop to
-almost zero or at least between or ear the blue line.
+almost zero or at least between or near the blue line.
 
 For instance, we can conclude that the residuals are correlated but the
 correlation ceases after lag 5.
@@ -272,8 +274,7 @@ uncorrelated residuals.
 
 Starting with the initial linear regression model :
 
-$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i$
-~NID(0, $\sigma^2$ )
+$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i\sim (0, \sigma^2)$
 
 By substituting :
 
