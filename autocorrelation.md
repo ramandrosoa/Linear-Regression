@@ -1,8 +1,6 @@
 AUTOCORRELATION
 ================
-$Minah Ramandrosoa$
-$
-2024-06$
+$Minah$ $Ramandrosoa$
 
 In linear regression, correlated error terms can introduce bias and
 inconsistency into the Ordinary Least Squares estimates of the
