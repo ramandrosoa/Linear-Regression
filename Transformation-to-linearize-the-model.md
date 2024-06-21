@@ -1,8 +1,6 @@
 TRANSFORMATIONS TO LINEARIZE THE MODEL
 ================
-Minah Ramandrosoa
-
-2024-06
+$Minah$ $Ramandrosoa$
 
 One of the key assumptions of linear regression is that there is a
 linear relationship between the independent and dependent variables.
