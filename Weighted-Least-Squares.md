@@ -1,4 +1,4 @@
-Weighted Least Squares
+WEIGHTED LEAST SQUARES
 ================
 Minah Ramandrosoa
 2024-06
