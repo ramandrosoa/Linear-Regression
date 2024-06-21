@@ -1,7 +1,6 @@
 WEIGHTED LEAST SQUARES
 ================
-Minah Ramandrosoa
-2024-06
+Minah Ramandrosoa (2024-06)
 
 In linear regression, having a constant variance of the error terms
 (homoscedasticity) is essential in linear regression to ensure the
