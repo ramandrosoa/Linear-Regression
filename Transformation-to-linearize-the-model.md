@@ -70,7 +70,7 @@ plot(x = x_log, y = y_log, main = "Logarithmic relationship")
 The relationship between the variables of our current data set looks
 more like a quadratic function.
 
-This relationship ca be expressed as follow $y = B_0x^{B_1}$
+This relationship can be expressed as follow $y = B_0x^{B_1}$
 
 This functional form is linearizable since :
 
