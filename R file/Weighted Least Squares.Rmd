@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
 
-In linear regression, having a constant variance of the error terms (homoscedasticity) is essential in linear regression to ensure the validity of statistical inference, maintain the accuracy of predictions and correctly interpret the results of the model 
+In linear regression, having a constant variance of the error terms $E_i$  (homoscedasticity) is essential to ensure the validity of statistical inference, maintain the accuracy of predictions and correctly interpret the results of the model 
 
 The Weighted Least Squares is an alternative of the Ordinary Least Squares in order to address the non-constant variance of the error terms(heteroscedasticity).
 
