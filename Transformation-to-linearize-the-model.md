@@ -1,7 +1,7 @@
 Transformation to linearize
 ================
 Minah Ramandrosoa
-2024-06-19
+2024-06
 
 ## TRANSFORMATIONS TO LINEARIZE THE MODEL
 
@@ -42,8 +42,7 @@ a mean of 0 and a standard deviation of 0.5.
 
 The function ‘exp()’ will ensure that these random values are positive.
 
-We initialize the value of x from 0 to 100 such as the x on the plot
-below.
+We initialize the value of $x$ from 0 to 100 such as the $x$ variable of the initial data set. 
 
 ``` r
 par(mfrow = c(2,2))
@@ -71,7 +70,7 @@ plot(x = x_log, y = y_log, main = "Logarithmic relationship")
 The relationship between the variables of our current data set looks
 more like a quadratic function.
 
-- $y = B_0x^{B_1}$
+This relationship ca be expressed as follow $y = B_0x^{B_1}$
 
 This functional form is linearizable since :
 
@@ -111,7 +110,7 @@ Given that $B_1 = 1.517$ and the original relationship between x and y
 was characterized by a power relationship, we can express this
 relationship as $y=x^{1.517}$
 
-Let us perform additional tests to confirm the linearity between the
+Let us perform additional tests (Rainbow and Harvey-Collier test) to confirm the linearity between the
 transformed variables
 
 ``` r
