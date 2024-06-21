@@ -10,7 +10,7 @@ and correctly interpret the results of the model
 
 The Weighted Least Squares is an alternative of the Ordinary Least
 Squares in order to address the non-constant variance of the error
-terms(heteroscedasticity).
+terms (heteroscedasticity).
 
 Consider the following simple linear regression model taking a sample of
 n data points $(x_i,y_i)$ :
