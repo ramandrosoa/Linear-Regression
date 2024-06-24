@@ -7,19 +7,25 @@ To set up a linear regression model correctly, it is essential to ensure that th
 
   - Linear Relationship:
 There should be a linear relationship between the dependent variable and the independent variables.
+  
   - Zero Mean of Errors:
 The expected value of the error terms should be zero.
+  
   - Homoscedasticity:
 The variance of the error terms should be constant across all levels of the independent variables. This means the error term $E_i$ should be the same for any $i$.
+  
   - Uncorrelated error terms:
-The covariance of $E_i$ and $E_j$, for $i\neq j$, should be 0.
+The covariance of $E_i$ and $E_j$, for $i\neq j$, should be 0. (autocorrelation)
+  
   - Normality of Errors:
 The error terms $E_i$ should be normally distributed.
+  
   - Non-Random Regressors:
 The regressors $x_1, x_2, ..., x_k$ should be non-random and measured without error.
+  
   - Linear Independence of the Regressors:
-The regressors should be linearly independent of each other.
-  - 
+The regressors should be linearly independent of each other. (multicollinearity)
+   
 
 ## Importance of These Assumptions
 These assumptions are crucial because they ensure the validity and reliability of the results obtained from the regression model. When these assumptions are met:
@@ -28,11 +34,12 @@ These assumptions are crucial because they ensure the validity and reliability o
   - Reliable Prediction: The model can provide reliable predictions for the dependent variable.
   - Interpretability: The coefficients of the model are interpretable and meaningful.
 
-## Diagnosing Assumption Violations
-While no model perfectly meets all assumptions, it is important to understand and diagnose any violations. Identifying these violations can help in informing about the model's validity and making necessary adjustments to the model or using alternative approaches to handle the violations.
+## Diagnosing Assumption Violations and Remedial Measures
+While no model perfectly meets all assumptions, it is important to understand and diagnose any violations. Identifying these violations can help in informing about the model's validity and making necessary adjustments to the model or using alternative approaches to handle the violations. 
+In this context, we will apply several remedial measures, such as the Variance Stabilizing, [transformations to linearize the model](Transformation-to-linearize-the-model.md), the [weighted least squares](Weighted-Least-Squares.md), variables transformation to handle [autocorrelation](autocorrelation.md), and ridge regression and variable selection techniques to address multicollinearity. 
 
-[Transformation to linearize the model](Transformation-to-linearize-the-model.md)
 
-[weighted least squares](Weighted-Least-Squares.md)
 
-[autocorrelation](autocorrelation.md)
+
+
+
