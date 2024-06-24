@@ -15,7 +15,7 @@ The expected value of the error terms should be zero.
 The variance of the error terms should be constant across all levels of the independent variables. This means the error term $E_i$ should be the same for any $i$.
   
   - Uncorrelated error terms:
-The covariance of $E_i$ and $E_j$, for $i\neq j$, should be 0. (autocorrelation)
+The covariance of $E_i$ and $E_j$, for $i\neq j$, should be 0. ([Autocorrelation](autocorrelation.md))
   
   - Normality of Errors:
 The error terms $E_i$ should be normally distributed.
@@ -24,7 +24,7 @@ The error terms $E_i$ should be normally distributed.
 The regressors $x_1, x_2, ..., x_k$ should be non-random and measured without error.
   
   - Linear Independence of the Regressors:
-The regressors should be linearly independent of each other. (multicollinearity)
+The regressors should be linearly independent of each other. (Multicollinearity)
    
 
 ## Importance of These Assumptions
