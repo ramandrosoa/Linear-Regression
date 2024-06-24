@@ -1,1 +1,1 @@
-[Transformatio to linearize the model](Transformation-to-linearize-the-model.md)
+[Transformation to linearize the model](Transformation-to-linearize-the-model.md)
