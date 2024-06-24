@@ -1,1 +1,1 @@
-[link](Transformation-to-linearize-the-model.md)
+[Transformatio to linearize the model](Transformation-to-linearize-the-model.md)
