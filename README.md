@@ -21,12 +21,12 @@ The covariance of $E_i$ and $E_j$, for $i\neq j$, should be 0.
 Fixing solution : Variable transformation to handle [Autocorrelation](autocorrelation.md)
   
   - Normality of Errors:
-The error terms $E_i$ should be normally distributed.
+The error terms $E_i$ should follow a Gaussian distribution.
 
 Fixing solution : Box-Cox transformation
   
   - Linear Independence of the Regressors:
-The regressors should be linearly independent of each other.
+The regressors should not be highly correlated to each other.
 
 Fixing solution : Ridge regression, variables selection
    
