@@ -7,22 +7,27 @@ To set up a linear regression model correctly, it is essential to ensure that th
 
   - Linear Relationship:
 There should be a linear relationship between the dependent variable and the independent variables.
+
 Fixing solution : [transformations to linearize the model](Transformation-to-linearize-the-model.md) 
   
   - Homoscedasticity:
 The variance of the error terms should be constant across all levels of the independent variables. This means the error term $E_i$ should be the same for any $i$. 
+
 Fixing solution : [weighted least squares](Weighted-Least-Squares.md) , variance stabilizing
   
   - Uncorrelated error terms:
 The covariance of $E_i$ and $E_j$, for $i\neq j$, should be 0.
-Fixing solution : ([Autocorrelation](autocorrelation.md))
+
+Fixing solution : Variable transformation to handle [Autocorrelation](autocorrelation.md)
   
   - Normality of Errors:
 The error terms $E_i$ should be normally distributed.
+
 Fixing solution : Box-Cox transformation
   
   - Linear Independence of the Regressors:
 The regressors should be linearly independent of each other.
+
 Fixing solution : Ridge regression, variables selection
    
 
