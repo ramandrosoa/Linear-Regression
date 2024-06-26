@@ -22,7 +22,7 @@ Then, $Var(y_i) = Var(E_i) = x_i\sigma^{2}$
 However, the relationship between the independent variable and the
 variance of the residuals is not always as straightforward.
 
-Consider $X$ as the transformation applied on the residuals, then we
+Consider $X$ as the transformation applied on the residuals to stabilize the variance, then we
 have :
 
 $Var(E_i') = Var(XE_i)$
