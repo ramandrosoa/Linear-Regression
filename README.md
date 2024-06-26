@@ -18,7 +18,7 @@ Fixing solution : [weighted least squares](Weighted-Least-Squares.md) , variance
   - Uncorrelated error terms:
 The covariance of $E_i$ and $E_j$, for $i\neq j$, should be 0.
 
-Fixing solution : Variable transformation to handle [Autocorrelation](autocorrelation.md)
+Fixing solution : [Variable transformation to handle autocorrelation](autocorrelation.md)
   
   - Normality of Errors:
 The error terms $E_i$ should follow a Gaussian distribution.
