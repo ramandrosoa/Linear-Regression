@@ -11,17 +11,17 @@ There should be a linear relationship between the dependent variable and the ind
 Fixing solution : [transformations to linearize the model](Transformation-to-linearize-the-model.md) 
   
   - Homoscedasticity:
-The variance of the error terms should be constant across all levels of the independent variables. This means the error term $E_i$ should be the same for any $i$. 
+The variance of the error terms should be constant across all levels of the independent variables. This means the error term $\varepsilon_i$ should be the same for any $i$. 
 
 Fixing solution : [weighted least squares](Weighted-Least-Squares.md) , variance stabilizing
   
   - Uncorrelated error terms:
-The covariance of $E_i$ and $E_j$, for $i\neq j$, should be 0.
+The covariance of $\varepsilon_i$ and $\varepsilon_j$, for $i\neq j$, should be 0.
 
 Fixing solution : [Variable transformation to handle autocorrelation](autocorrelation.md)
   
   - Normality of Errors:
-The error terms $E_i$ should follow a Gaussian distribution.
+The error terms $\varepsilon_i$ should follow a Gaussian distribution.
 
 Fixing solution : Box-Cox transformation
   
