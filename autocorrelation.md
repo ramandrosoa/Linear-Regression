@@ -139,7 +139,7 @@ $$
 \hat{\phi}  = \frac{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{\varepsilon})(\varepsilon_{i+1} - \bar{\varepsilon})}{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{\varepsilon})^2}
 $$
 
-Notice that this approximation is the correlation coefficient between \varepsilon_i and \varepsilon_{i+1} formula where $Var(\varepsilon_i)$ = $\varepsilon_{i+1}$ (Stationarity)
+Notice that this approximation is the correlation coefficient between $\varepsilon_i$ and $\varepsilon_{i+1}$ formula where $Var(\varepsilon_i)$ = $\varepsilon_{i+1}$ (Stationarity)
 
 
 
