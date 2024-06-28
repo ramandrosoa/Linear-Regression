@@ -12,7 +12,7 @@ correlated, expressed by $Cov(\varepsilon_i, \varepsilon_j)\neq 0$
 Given the simple linear regression model with first-order autoregressive
 errors :
 
-$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ , where the error terms are correlated
+$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ , where the error terms  $\varepsilon_i$ are correlated
 
   - $y_i$ and $x_i$ are the observed values of the response and predictor
 variables at time $i$
@@ -41,7 +41,7 @@ Corr(\varepsilon_i, \varepsilon_{i-1}) = \frac{Cov(\varepsilon_{i-1}, \varepsilo
 $$
 
 Assume the stationarity process where the mean and variance of the error
-term are constant over time, then 
+term are constant over time, thus
 
 $$
 Var(\varepsilon_{i-1}) = Var(\varepsilon_i) = Var(\varepsilon_{i+1}) = ... 
