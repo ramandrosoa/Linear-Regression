@@ -57,12 +57,12 @@ The variances $Var(\phi \varepsilon_{i-1})$ and $Var(a_i)$ are independent so th
 are additive.By applying the scaling property of the variance when
 multiplied by a constant ($\phi$ is the constant), we get:
 
-$Var(Ei) = \phi^2Var(\varepsilon_{i-1}) + Var(a_i)$
+$Var(\varepsilon_i) = \phi^2Var(\varepsilon_{i-1}) + Var(a_i)$
 
-$Var(Ei) = \phi^2Var(\varepsilon_i) + \sigma^2$
+$Var(\varepsilon_i) = \phi^2Var(\varepsilon_i) + \sigma^2$
 
 $$
-Var(Ei) = \frac{\sigma^2} {(1-\phi^2)}
+Var(\varepsilon_i) = \frac{\sigma^2} {(1-\phi^2)}
 $$
 
 While $Cov(\varepsilon_{i-1}, \varepsilon_i) = Cov(\varepsilon_{i-1}, \phi \varepsilon_{i-1}+a_i,)$
