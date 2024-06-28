@@ -121,11 +121,11 @@ plot(x = x_log, y = y_log, main = "Logarithmic relationship")
 The relationship between the variables of our current data set looks
 more like a quadratic function.
 
-This relationship can be expressed as follow : $y = B_0x^{B_1}$
+This relationship can be expressed as follow : $y = \beta_0x^{\beta_1}$
 
 This functional form is linearizable since :
 
-$\log(y) = \log(B_0) + B_1 \log(x)$
+$\log(y) = \log(\beta_0) + \beta_1 \log(x)$
 
 Then, in order to get linearity, we apply the following transformation
 on $y$ and $x$
@@ -166,7 +166,7 @@ cat ( "The parameter B1 of the linear regression model is :" ,coef(model_lin)["x
 
     ## The parameter B1 of the linear regression model is : 1.517943
 
-Given that $B_1 = 1.517$ and the original relationship between x and y
+Given that $\beta_1 = 1.517$ and the original relationship between x and y
 was characterized by a power relationship, we can express this
 relationship as $y=x^{1.517}$
 
