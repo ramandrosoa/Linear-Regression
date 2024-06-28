@@ -23,8 +23,8 @@ $x_{i1} , x_{i2}$ and the dependent variable $y_i$. $\beta_1$ and
 $\beta_2$ are the unknown parameters :
 
 $$
-y_1 = \beta_1x_{11} + \beta_2x_{12} \\
-y_2 = \beta_1x_{21} + \beta_2x_{22}
+y_1 = \beta_1 x_{11} + \beta_2 x_{12} \\
+y_2 = \beta_1 x_{21} + \beta_2 x_{22}
 $$
 
 - Consider this first system of equations with 2 observations :
