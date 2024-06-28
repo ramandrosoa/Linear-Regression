@@ -28,7 +28,7 @@ Fixing solution : Box-Cox transformation
   - Linear Independence of the Regressors:
 The regressors should not be highly correlated to each other.
 
-Fixing solution : [Ridge regression](Multicollinearity-part1.md), variables selection
+Fixing solution : [Ridge regression](Multicollinearity-part1.md) , variables selection
    
 
 ## Importance of These Assumptions
