@@ -18,7 +18,7 @@ Fixing solution : [weighted least squares](https://github.com/ramandrosoa/Linear
   - Uncorrelated error terms:
 The covariance of $\varepsilon_i$ and $\varepsilon_j$, for $i\neq j$, should be 0.
 
-Fixing solution : [Variables transformation to handle autocorrelation](autocorrelation.md)
+Fixing solution : [Variables transformation to handle autocorrelation](https://github.com/ramandrosoa/Linear-Regression/blob/main/R%20file/autocorrelation.md)
   
   - Normality of Errors:
 The error terms $\varepsilon_i$ should follow a Gaussian distribution.
