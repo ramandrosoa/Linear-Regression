@@ -13,7 +13,7 @@ Fixing solution : [Variables transformation to linearize the model](https://gith
   - Homoscedasticity:
 The variance of the error terms should be constant across all levels of the independent variables. This means the error term $\varepsilon_i$ should be the same for any $i$. 
 
-Fixing solution : [weighted least squares](Weighted-Least-Squares.md) , variance stabilizing
+Fixing solution : [weighted least squares](https://github.com/ramandrosoa/Linear-Regression/blob/main/R%20file/Weighted-Least-Squares.md) , variance stabilizing
   
   - Uncorrelated error terms:
 The covariance of $\varepsilon_i$ and $\varepsilon_j$, for $i\neq j$, should be 0.
