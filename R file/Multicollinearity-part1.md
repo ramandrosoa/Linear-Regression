@@ -45,6 +45,7 @@ $$
 $$
 10 = \beta_1 +\beta_2 
 $$
+
 $$
 12 = \beta_1 +2\beta_2
 $$
@@ -94,6 +95,7 @@ grid()
 $$
 10 = \beta_1 +\beta_2 
 $$
+
 $$
 20 = 2\beta_1 +2\beta_2
 $$
@@ -115,6 +117,7 @@ any new information.
 $$
 10 = \beta_1 +\beta_2 
 $$
+
 $$
 12 = \beta_1 +2\beta_2
 $$
