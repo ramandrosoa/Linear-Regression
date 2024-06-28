@@ -170,8 +170,14 @@ $$
 $x_1$ and $x_2$ are scaled to unit length, that is :
 
 $$
-\bar{x_1} = \bar{x_2} = 0 \\
-x_{11}^2 + x_{21}^2 = 1 \\
+\bar{x_1} = \bar{x_2} = 0 
+$$
+
+$$
+x_{11}^2 + x_{21}^2 = 1 
+$$
+
+$$
 x_{12}^2 + x_{22}^2 = 1
 $$
 
@@ -184,8 +190,14 @@ $$
 and
 
 $$
-\Sigma_{i=1}^2x_{i1}x_{i2} = x_{11}x_{12} + x_{21}x_{22} \\
-\Sigma_{i=1}^2x_{i1}^2 = x_{11}^2 + x_{21}^2 =1 \\
+\Sigma_{i=1}^2x_{i1}x_{i2} = x_{11}x_{12} + x_{21}x_{22}
+$$
+
+$$
+\Sigma_{i=1}^2x_{i1}^2 = x_{11}^2 + x_{21}^2 =1
+$$
+
+$$
 \Sigma_{i=1}^2x_{i2}^2 = x_{12}^2 + x_{22}^2 =1
 $$
 
@@ -579,7 +591,7 @@ select(fit)
     ## modified L-W estimator is 0.8695482 
     ## smallest value of GCV  at 4.47
 
-**The selection of $\lambda$ will be done by using the smallest value of
+**The selection of** $\lambda$ **will be done by using the smallest value of
 Generalized Cross Validation (GCV) value.**
 
 ``` r
