@@ -1,4 +1,4 @@
-TRANSFORMATIONS TO LINEARIZE THE MODEL
+TRANSFORMATION TO LINEARIZE THE MODEL
 ================
 
 One of the key assumptions of linear regression is that there is a
