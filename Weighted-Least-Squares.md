@@ -13,7 +13,7 @@ terms (heteroscedasticity).
 Consider the following simple linear regression model taking a sample of
 n data points $(x_i,y_i)$ :
 
-$y_i = B_0 + B_1x_i + E_i$ , $E_i \sim N(0,xi\sigma^{2})$
+$y_i = \beta_0 + \beta_1x_i + E_i$ , $E_i \sim N(0,xi\sigma^{2})$
 
 A priori, the variance of the residuals increased with the regressors.
 
@@ -61,31 +61,31 @@ $$
 
 Recall the original model :
 
-$y_i = B_0 + B_1x_i + E_i$
+$y_i = \beta_0 + \beta_1x_i + E_i$
 
 We rewrite it as follow :
 
-$\frac{y_i}{\sqrt{{x_i}}}$ = $B_0(\frac{1}{{\sqrt{x_i}}} )$ +
-$B_1x_i(\frac{1}{{\sqrt{x_i}}} )$+ $E_i'$
+$\frac{y_i}{\sqrt{{x_i}}}$ = $\beta_0(\frac{1}{{\sqrt{x_i}}} )$ +
+$\beta_1x_i(\frac{1}{{\sqrt{x_i}}} )$+ $E_i'$
 
-$\frac{y_i}{\sqrt{{x_i}}}$ = $B_0(\frac{1}{{\sqrt{x_i}}} )$ +
-$B_1{\sqrt{x_i}}$+ $E_i'$
+$\frac{y_i}{\sqrt{{x_i}}}$ = $\beta_0(\frac{1}{{\sqrt{x_i}}} )$ +
+$\beta_1{\sqrt{x_i}}$+ $E_i'$
 
 The sum of the weighted errors are given by :
 
 $$
-\Sigma_{i=1}^{n} (E_i')^{2} =  \Sigma_{i=1}^{n}(\frac{y_i}{\sqrt{{x_i}}}-B_0(\frac{1}{{\sqrt{x_i}}} )-B_1{\sqrt{x_i}} )^{2}
+\Sigma_{i=1}^{n} (E_i')^{2} =  \Sigma_{i=1}^{n}(\frac{y_i}{\sqrt{{x_i}}}-\beta_0(\frac{1}{{\sqrt{x_i}}} )-\beta_1{\sqrt{x_i}} )^{2}
 $$
 
 $$
-\Sigma_{i=1}^{n} (E_i')^{2} = \Sigma_{i=1}^{n} (\frac{1}{x_i}) (y_i-B_o -B_1x_i)^2
+\Sigma_{i=1}^{n} (E_i')^{2} = \Sigma_{i=1}^{n} (\frac{1}{x_i}) (y_i-\beta_o -\beta_1x_i)^2
 $$
 
 We get the following weighted least squares function which we will
 minimize :
 
 $$
-S(B_0, B_1) =\Sigma_{i=1}^{n} (\frac{1}{x_i})(y_i-B_o -B_1x_i)^2
+S(\beta_0, \beta_1) =\Sigma_{i=1}^{n} (\frac{1}{x_i})(y_i-\beta_o -\beta_1x_i)^2
 $$
 
 In this simple linear regression, the weight that stabilizes the
