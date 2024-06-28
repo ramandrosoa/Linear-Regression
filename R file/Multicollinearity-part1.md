@@ -20,7 +20,7 @@ Now, let us delve into the effects of multicollinearity.
 
 Suppose the system of equations with the independent variables
 $x_{i1} , x_{i2}$ and the dependent variable $y_i$. $\beta_1$ and
-$\beta_2$ are the unknown parameters :
+$\beta_2$ are the unknown parameters:
 
 $$
 y_1 = \beta_1 x_{11} + \beta_2 x_{12}
