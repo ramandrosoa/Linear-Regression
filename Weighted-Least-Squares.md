@@ -13,7 +13,7 @@ terms (heteroscedasticity).
 Consider the following simple linear regression model taking a sample of
 n data points $(x_i,y_i)$ :
 
-$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ , $\varepsilon_i \sim N(0,xi\sigma^{2})$
+$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ , $\varepsilon_i \sim N(0,x_i\sigma^{2})$
 
 A priori, the variance of the residuals increased with the regressors.
 
