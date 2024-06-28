@@ -18,7 +18,7 @@ $y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ , where the error terms are correla
 variables at time $i$
 
   - Correlated error terms often follow a first order autoregressive process
-AR(1):
+AR(1) and can be expressed as follow:
 
 $$
 \varepsilon_i = \phi \varepsilon_{i-1} + a_i , a_i \sim N(0,\sigma^2)
