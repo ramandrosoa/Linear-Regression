@@ -546,12 +546,11 @@ Through the previous analysis, we found out that multicollinearity
 inflate the variance of the parameter estimates, making them unstable
 and less reliable.
 
-The Ridge Regression also known as L2 Regularization helps to shrinks
+The Ridge Regression also known as L2 Regularization helps to shrink
 the estimated coefficients towards zero to fix the magnitude inflation
 by adding a ***small bias***.
 
-This small bias will be added to the loss function that we will minimize
-:
+This small bias will be added to the cost function that we will minimize:
 
 $$
 S = \Sigma_{i=1}^n (y_i-\beta_0-\Sigma_{k=1}^j \beta_k)^2 + \lambda\Sigma_{k=1}^j (\beta_k)^2
