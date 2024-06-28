@@ -136,7 +136,7 @@ We can estimate $\phi$ by using the Ordinary Least Squares regression to
 approximate the slope :
 
 $$
-\hat{\phi}  = \frac{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{E})(\varepsilon_{i+1} - \bar{E})}{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{E})^2}
+\hat{\phi}  = \frac{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{\varepsilon})(\varepsilon_{i+1} - \bar{\varepsilon})}{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{\varepsilon})^2}
 $$
 
 We know that the expected value of the error terms $\varepsilon_i$ is 0 then :
