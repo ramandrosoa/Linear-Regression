@@ -239,8 +239,8 @@ acf(resid(model))
 ![](autocorrelation_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 
-*The lag k autocorrelation is given by $p_k = \phi^k$ for $k =1,2,...,$
-this equation is called the autocorrelation function.
+*The lag k autocorrelation is given by* $p_k = \phi^k$  *for*  $k =1,2,...,$
+*this equation is called the autocorrelation function.
 The Durbin-Watson Test only checks for autocorrelation with a lag of 1.*
 
 This plot shows the correlation of the error terms in different lags.
