@@ -99,6 +99,8 @@ $$
 Corr(\varepsilon_i, \varepsilon_{i-1}) = \phi
 $$
 
+Therefore, the parameter $\phi$ is also the correlation coefficient. 
+
 The lag k autocorrelation is given by $p_k = \phi^k$ for $k =1,2,...,$
 this equation is called the autocorrelation function.
 
