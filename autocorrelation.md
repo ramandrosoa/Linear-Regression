@@ -25,7 +25,7 @@ $A_i$ is a random variable normally and independently distributed.
 Given the simple linear regression model with first-order autoregressive
 errors :
 
-$y_i = B_0 + B_1x_i + \varepsilon_i$ where the error terms can be expressed as
+$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ where the error terms can be expressed as
 follow : $\varepsilon_i = \phi \varepsilon_{i-1} + A_i$
 
 $y_i$ and $x_i$ are the observed values of the response and predictor
@@ -130,7 +130,7 @@ $\varepsilon_{i+1}$ = $\phi \varepsilon_{i} + A_i$ , $A_i \sim N(0,\sigma^2)$
 
 This relationship resembles a typical linear regression form:
 
-$y_i$ = $B_1 x_{i} + \varepsilon_i$ , $\varepsilon_i \sim N(0,\sigma^2)$
+$y_i$ = $\beta_1 x_{i} + \varepsilon_i$ , $\varepsilon_i \sim N(0,\sigma^2)$
 
 We can estimate $\phi$ by using the Ordinary Least Squares regression to
 approximate the slope :
@@ -272,26 +272,26 @@ uncorrelated residuals.
 
 Starting with the initial linear regression model :
 
-$y_i = B_0 + B_1 x_i + \varepsilon_i$ and $\varepsilon_i = \phi \varepsilon_{i-1} + A_i$ , where $A_i\sim (0, \sigma^2)$
+$y_i = \beta_0 + \beta_1 x_i + \varepsilon_i$ and $\varepsilon_i = \phi \varepsilon_{i-1} + A_i$ , where $A_i\sim (0, \sigma^2)$
 
 By substituting :
 
 $y_i' = y_i - \phi y_{i-1}$
 
-$y_i' = (B_0 + B_1x_i +\varepsilon_i) - \phi(B_0 + B_1x_{i-1} +\varepsilon_{i-1})$
+$y_i' = (\beta_0 + \beta_1x_i +\varepsilon_i) - \phi(\beta_0 + \beta_1x_{i-1} +\varepsilon_{i-1})$
 
-$y_i' = B_0 (1-\phi) + B_1(x_i -\phi x_{i-1}) + \varepsilon_i-\phi E{i-1}$
+$y_i' = \beta_0 (1-\phi) + \beta_1(x_i -\phi x_{i-1}) + \varepsilon_i-\phi E{i-1}$
 
 Thus,
 
 $$
-y_i' = B_0 (1-\phi) + B_1x_i' + A_i
+y_i' = \beta_0 (1-\phi) + \beta_1x_i' + A_i
 $$
 
 Here, $A_i$ represents residuals that are uncorrelated and exhibit
 constant variance (white noise).
 
-Additionally, $B_0' = B_0 (1-\phi)$ represents the transformed y
+Additionally, $\beta_0' = \beta_0 (1-\phi)$ represents the transformed y
 intercept, enhancing the model’s performance.
 
 $\phi$ will be approximated by using $p_1 = corr(\varepsilon_i, E{i-1})$
