@@ -23,21 +23,27 @@ $x_{i1} , x_{i2}$ and the dependent variable $y_i$. $\beta_1$ and
 $\beta_2$ are the unknown parameters :
 
 $$
-y_1 = \beta_1 x_{11} + \beta_2 x_{12} \\
+y_1 = \beta_1 x_{11} + \beta_2 x_{12}
+$$
+$$
 y_2 = \beta_1 x_{21} + \beta_2 x_{22}
 $$
 
 - Consider this first system of equations with 2 observations :
 
 $$
-10 = \beta_1 +\beta_2 \\
+10 = \beta_1 +\beta_2 
+$$
+$$
 20 = 2\beta_1 +2\beta_2
 $$
 
 - And this second system of equations with 2 observations :
 
 $$
-10 = \beta_1 +\beta_2 \\
+10 = \beta_1 +\beta_2 
+$$
+$$
 12 = \beta_1 +2\beta_2
 $$
 
@@ -84,7 +90,9 @@ grid()
 - For the first system :
 
 $$
-10 = \beta_1 +\beta_2 \\
+10 = \beta_1 +\beta_2 
+$$
+$$
 20 = 2\beta_1 +2\beta_2
 $$
 
@@ -103,7 +111,9 @@ any new information.
 - For the second system :
 
 $$
-10 = \beta_1 +\beta_2 \\
+10 = \beta_1 +\beta_2 
+$$
+$$
 12 = \beta_1 +2\beta_2
 $$
 
