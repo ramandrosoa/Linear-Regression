@@ -1,11 +1,6 @@
-<<<<<<< HEAD:R file/Transformation-to-linearize-the-model.md
+
 Variables transformation to linearize the model
 =======
-TRANSFORMATION TO LINEARIZE THE MODEL
->>>>>>> 0ff8caccabcb85fdbf85d343f5cfa56ea695af70:Transformation-to-linearize-the-model.md
-================
-Minah Ramandrosoa
-2024-06
 
 One of the key assumptions of linear regression is that there is a
 linear relationship between the independent and dependent variables.
