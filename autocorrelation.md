@@ -51,7 +51,7 @@ $$
 
 Recall $\varepsilon_i = \phi \varepsilon_{i-1} + A_i$ where $A_i\sim N(0,\sigma^2)$
 
-We can rewrite $Var(Ei) = Var(\phi \varepsilon_{i-1} + A_i)$
+We can rewrite $Var(\varepsilon_i) = Var(\phi \varepsilon_{i-1} + A_i)$
 
 The variances $Var(\phi \varepsilon_{i-1})$ and $Var(A_i)$ are independent so they
 are additive.By applying the scaling property of the variance when
