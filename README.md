@@ -8,7 +8,7 @@ To set up a linear regression model correctly, it is essential to ensure that th
   - Linear Relationship:
 There should be a linear relationship between the dependent variable and the independent variables.
 
-Fixing solution : [Variables transformation to linearize the model](Transformation-to-linearize-the-model.md) 
+Fixing solution : [Variables transformation to linearize the model](https://github.com/ramandrosoa/Linear-Regression/blob/main/R%20file/Transformation-to-linearize-the-model.md) 
   
   - Homoscedasticity:
 The variance of the error terms should be constant across all levels of the independent variables. This means the error term $\varepsilon_i$ should be the same for any $i$. 
