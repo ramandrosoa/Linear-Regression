@@ -419,9 +419,10 @@ close to -1 or +1 suggest that there is a relationship between the 2
 compared variables.
 
 The scatter plot and the covariance matrix are both bivariate method
-that compares the dependency of one variable to one another We can try
-another way to check out the correlation between each variable, such as
-using the R squared and the Variance Inflation Factors (VIF)
+that compares the dependency of one variable to one another.
+
+We can try another way to check out the correlation between each variable, such as
+using the $R^2$ and the Variance Inflation Factors (VIF)
 
 ### The coefficient of determination
 
