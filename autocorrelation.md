@@ -17,8 +17,7 @@ $$
 $$
 
 $\phi$ is an unknown parameter that defines the relationship between
-successive model errors $\\varepsilon_i$ and $\varepsilon_{i-1}$. It can be estimated using
-the Ordinary Least Squares method.
+successive model errors $\\varepsilon_i$ and $\varepsilon_{i-1}$. 
 
 $a_i$ is a random variable normally and independently distributed.
 
