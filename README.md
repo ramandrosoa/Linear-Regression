@@ -8,7 +8,7 @@ To set up a linear regression model correctly, it is essential to ensure that th
   - Linear Relationship:
 There should be a linear relationship between the dependent variable and the independent variables.
 
-Fixing solution : [transformations to linearize the model](Transformation-to-linearize-the-model.md) 
+Fixing solution : [Variables transformation to linearize the model](Transformation-to-linearize-the-model.md) 
   
   - Homoscedasticity:
 The variance of the error terms should be constant across all levels of the independent variables. This means the error term $\varepsilon_i$ should be the same for any $i$. 
@@ -18,7 +18,7 @@ Fixing solution : [weighted least squares](Weighted-Least-Squares.md) , variance
   - Uncorrelated error terms:
 The covariance of $\varepsilon_i$ and $\varepsilon_j$, for $i\neq j$, should be 0.
 
-Fixing solution : [Variable transformation to handle autocorrelation](autocorrelation.md)
+Fixing solution : [Variables transformation to handle autocorrelation](autocorrelation.md)
   
   - Normality of Errors:
 The error terms $\varepsilon_i$ should follow a Gaussian distribution.
@@ -28,7 +28,7 @@ Fixing solution : Box-Cox transformation
   - Linear Independence of the Regressors:
 The regressors should not be highly correlated to each other.
 
-Fixing solution : Ridge regression, variables selection
+Fixing solution : [Ridge regression](Multicollinearity-part1.md), variables selection
    
 
 ## Importance of These Assumptions
@@ -40,7 +40,6 @@ These assumptions are crucial because they ensure the validity and reliability o
 
 ## Diagnosing Assumption Violations and Remedial Measures
 While no model perfectly meets all assumptions, it is important to understand and diagnose any violations. Identifying these violations can help in informing about the model's validity and making necessary adjustments to the model or using alternative approaches to handle the violations. 
-In this context, we will apply several remedial measures, such as the Variance Stabilizing, transformation to linearize the model, the weighted least squares, variables transformation to handle autocorrelation, ridge regression and variable selection techniques to address multicollinearity. 
 
 
 

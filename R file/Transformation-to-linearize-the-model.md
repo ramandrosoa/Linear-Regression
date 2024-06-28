@@ -1,4 +1,8 @@
+<<<<<<< HEAD:R file/Transformation-to-linearize-the-model.md
 Variables transformation to linearize the model
+=======
+TRANSFORMATION TO LINEARIZE THE MODEL
+>>>>>>> 0ff8caccabcb85fdbf85d343f5cfa56ea695af70:Transformation-to-linearize-the-model.md
 ================
 Minah Ramandrosoa
 2024-06
@@ -168,8 +172,13 @@ cat ( "The parameter B1 of the linear regression model is :" ,coef(model_lin)["x
 
     ## The parameter B1 of the linear regression model is : 1.517943
 
+<<<<<<< HEAD:R file/Transformation-to-linearize-the-model.md
 Given that $\beta_1 = 1.517$ and the original relationship between x and
 y was characterized by a power relationship, we can express this
+=======
+Given that $\beta_1 = 1.517$ and the original relationship between x and y
+was characterized by a power relationship, we can express this
+>>>>>>> 0ff8caccabcb85fdbf85d343f5cfa56ea695af70:Transformation-to-linearize-the-model.md
 relationship as $y=x^{1.517}$
 
 Let us perform additional tests to confirm the linearity between the
