@@ -262,7 +262,7 @@ $$
 
 We know that there is a strong correlation when the correlation
 coefficient $r$ is close to 1 or -1, thus when the correlation
-coefficient $r$ between $x_1$ and $x_2$ is close to 1, the variances
+coefficient $r$ between $x_1$ and $x_2$ is close to 1 or -1, the variances
 $Var(\hat{\beta_1})$ and $Var(\hat{\beta_2})$ will tend to infinity.
 
 Therefore, we can conclude a strong correlation between the variables
