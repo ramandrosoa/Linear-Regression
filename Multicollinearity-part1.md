@@ -1,7 +1,5 @@
-Multicollinearity Part 1
+Multicollinearity - Ridge Regression
 ================
-Minah
-2024-06
 
 One of the key assumptions in Linear Regression is that there should be
 no correlation between the independent variables.
