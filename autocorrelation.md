@@ -7,7 +7,7 @@ regression coefficients, thereby compromising predictive performance of
 the model.
 
 Autocorrelation occurs when the errors terms $E_i$ and $E_j$ are
-correlated, expressed by $Cov(E_i, E_j)\neq 0$
+correlated, expressed by $Cov(\varepsilon_i, \varepsilon_j)\neq 0$
 
 Correlated error terms often follow a first order autoregressive process
 AR(1):
