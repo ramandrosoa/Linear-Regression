@@ -1,5 +1,5 @@
 ---
-title: "Multicollinearity Part 1"
+title: "Multicollinearity - Ridge Regression"
 author: "Minah"
 date: "2024-06"
 output: github_document
