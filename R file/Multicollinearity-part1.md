@@ -128,8 +128,8 @@ is the only combination of $\beta_1$ and $\beta_2$ that simultaneously
 satisfies both equations, providing a unique solution.
 
 *Notice that if the equations derived from observations are correlated,
-it suggests that the independent variables themselves ( $x_{i1}$ and
-$x_{i2}$ ) are linearly dependent*
+it suggests that the independent variables themselves* ( $x_{i1}$ and
+$x_{i2}$ ) *are linearly dependent*
 
 **Conclusion**
 
