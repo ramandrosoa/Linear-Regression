@@ -37,7 +37,7 @@ we can deploy a Durbin-Watson (DW) test. It tests for first order serial
 correlation, which means it checks whether the residuals are correlated
 with each other across time.
 
-The correlation coefficient between of $\varepsilon_i$ and
+First, let us approximate the correlation coefficient between of $\varepsilon_i$ and
 $\varepsilon_{i-1}$ is given by:
 
 $$
