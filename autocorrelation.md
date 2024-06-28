@@ -13,20 +13,20 @@ Correlated error terms often follow a first order autoregressive process
 AR(1):
 
 $$
-\varepsilon_i = \phi \varepsilon_{i-1} + A_i , A_i \sim N(0,\sigma^2)
+\varepsilon_i = \phi \varepsilon_{i-1} + a_i , a_i \sim N(0,\sigma^2)
 $$
 
 $\phi$ is an unknown parameter that defines the relationship between
 successive model errors $\\varepsilon_i$ and $\varepsilon_{i-1}$. It can be estimated using
 the Ordinary Least Squares method.
 
-$A_i$ is a random variable normally and independently distributed.
+$a_i$ is a random variable normally and independently distributed.
 
 Given the simple linear regression model with first-order autoregressive
 errors :
 
 $y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ where the error terms can be expressed as
-follow : $\varepsilon_i = \phi \varepsilon_{i-1} + A_i$
+follow : $\varepsilon_i = \phi \varepsilon_{i-1} + a_i$
 
 $y_i$ and $x_i$ are the observed values of the response and predictor
 variables at time $i$
@@ -49,15 +49,15 @@ $$
 Var(\varepsilon_{i-1}) = Var(\varepsilon_i) = Var(\varepsilon_{i+1}) = ... 
 $$
 
-Recall $\varepsilon_i = \phi \varepsilon_{i-1} + A_i$ where $A_i\sim N(0,\sigma^2)$
+Recall $\varepsilon_i = \phi \varepsilon_{i-1} + a_i$ where $a_i\sim N(0,\sigma^2)$
 
-We can rewrite $Var(\varepsilon_i) = Var(\phi \varepsilon_{i-1} + A_i)$
+We can rewrite $Var(\varepsilon_i) = Var(\phi \varepsilon_{i-1} + a_i)$
 
-The variances $Var(\phi \varepsilon_{i-1})$ and $Var(A_i)$ are independent so they
+The variances $Var(\phi \varepsilon_{i-1})$ and $Var(a_i)$ are independent so they
 are additive.By applying the scaling property of the variance when
 multiplied by a constant ($\phi$ is the constant), we get:
 
-$Var(Ei) = \phi^2Var(\varepsilon_{i-1}) + Var(A_i)$
+$Var(Ei) = \phi^2Var(\varepsilon_{i-1}) + Var(a_i)$
 
 $Var(Ei) = \phi^2Var(\varepsilon_i) + \sigma^2$
 
@@ -65,15 +65,15 @@ $$
 Var(Ei) = \frac{\sigma^2} {(1-\phi^2)}
 $$
 
-While $Cov(\varepsilon_{i-1}, \varepsilon_i) = Cov(\varepsilon_{i-1}, \phi \varepsilon_{i-1}+A_i,)$
+While $Cov(\varepsilon_{i-1}, \varepsilon_i) = Cov(\varepsilon_{i-1}, \phi \varepsilon_{i-1}+a_i,)$
 
 Applying the linearity of covariance :
 
-$Cov(\varepsilon_{i-1}, \varepsilon_i) = Cov(\phi \varepsilon_{i-1}, \varepsilon_{i-1})+ Cov(A_i, \varepsilon_{i-1})$
+$Cov(\varepsilon_{i-1}, \varepsilon_i) = Cov(\phi \varepsilon_{i-1}, \varepsilon_{i-1})+ Cov(a_i, \varepsilon_{i-1})$
 
-$Cov(\varepsilon_{i-1}, \varepsilon_i) = \phi Cov(\varepsilon_{i-1}, \varepsilon_{i-1})+ Cov(A_i, \varepsilon_{i-1})$
+$Cov(\varepsilon_{i-1}, \varepsilon_i) = \phi Cov(\varepsilon_{i-1}, \varepsilon_{i-1})+ Cov(a_i, \varepsilon_{i-1})$
 
-As $A_i$ are noise , the $Cov(A_i, \varepsilon_{i-1})$ =0
+As $a_i$ are noise , the $Cov(a_i, \varepsilon_{i-1})$ =0
 
 $Cov(\varepsilon_{i-1}, \varepsilon_i) = \phi Cov(\varepsilon_{i-1}, \varepsilon_{i-1})$
 
@@ -126,7 +126,7 @@ Let us express $d$ as a function of the correlation coefficient $\phi$.
 
 Recall:
 
-$\varepsilon_{i+1}$ = $\phi \varepsilon_{i} + A_i$ , $A_i \sim N(0,\sigma^2)$
+$\varepsilon_{i+1}$ = $\phi \varepsilon_{i} + a_i$ , $a_i \sim N(0,\sigma^2)$
 
 This relationship resembles a typical linear regression form:
 
@@ -272,7 +272,7 @@ uncorrelated residuals.
 
 Starting with the initial linear regression model :
 
-$y_i = \beta_0 + \beta_1 x_i + \varepsilon_i$ and $\varepsilon_i = \phi \varepsilon_{i-1} + A_i$ , where $A_i\sim (0, \sigma^2)$
+$y_i = \beta_0 + \beta_1 x_i + \varepsilon_i$ and $\varepsilon_i = \phi \varepsilon_{i-1} + a_i$ , where $a_i\sim (0, \sigma^2)$
 
 By substituting :
 
@@ -285,10 +285,10 @@ $y_i' = \beta_0 (1-\phi) + \beta_1(x_i -\phi x_{i-1}) + \varepsilon_i-\phi E{i-1
 Thus,
 
 $$
-y_i' = \beta_0 (1-\phi) + \beta_1x_i' + A_i
+y_i' = \beta_0 (1-\phi) + \beta_1x_i' + a_i
 $$
 
-Here, $A_i$ represents residuals that are uncorrelated and exhibit
+Here, $a_i$ represents residuals that are uncorrelated and exhibit
 constant variance (white noise).
 
 Additionally, $\beta_0' = \beta_0 (1-\phi)$ represents the transformed y
