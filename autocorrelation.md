@@ -1,115 +1,113 @@
 AUTOCORRELATION
 ================
-Minah Ramandrosoa
-2024-06
 
 In linear regression, correlated error terms can introduce bias and
 inconsistency into the Ordinary Least Squares estimates of the
 regression coefficients, thereby compromising predictive performance of
 the model.
 
-Autocorrelation occurs when the errors terms $E_i$ and $E_j$ are
-correlated, expressed by $Cov(E_i, E_j)\neq 0$
-
-Correlated error terms often follow a first order autoregressive process
-AR(1):
-
-$$
-E_i = \phi E_{i-1} + A_i , A_i \sim N(0,\sigma^2)
-$$
-
-$\phi$ is an unknown parameter that defines the relationship between
-successive model errors $E_i$ and $E_{i-1}$. It can be estimated using
-the Ordinary Least Squares method.
-
-$A_i$ is a random variable normally and independently distributed.
+Autocorrelation occurs when the errors terms $\varepsilon_i$ and $\varepsilon_j$ are
+correlated, expressed by $Cov(\varepsilon_i, \varepsilon_j)\neq 0$
 
 Given the simple linear regression model with first-order autoregressive
 errors :
 
-$y_i = B_0 + B_1x_i + E_i$ where the error terms can be expressed as
-follow : $E_i = \phi E_{i-1} + A_i$
+$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ , where the error terms  $\varepsilon_i$ are correlated
 
-$y_i$ and $x_i$ are the observed values of the response and predictor
+  - $y_i$ and $x_i$ are the observed values of the response and predictor
 variables at time $i$
+
+  - Correlated error terms often follow a first order autoregressive process
+AR(1) and can be expressed as follow:
+
+$$
+\varepsilon_i = \phi \varepsilon_{i-1} + a_i , a_i \sim N(0,\sigma^2)
+$$
+
+  - $\phi$ is an unknown parameter that defines the relationship between
+successive model errors $\\varepsilon_i$ and $\varepsilon_{i-1}$. 
+
+  - $a_i$ is a random variable normally and independently distributed.
 
 To detect the presence of autocorrelation in a linear regression model,
 we can deploy a Durbin-Watson (DW) test. It tests for first order serial
 correlation, which means it checks whether the residuals are correlated
 with each other across time.
 
-The correlation coefficient between of $E_i$ and $E_{i-1}$ is given by:
+The correlation coefficient between of $\varepsilon_i$ and $\varepsilon_{i-1}$ is given by:
 
 $$
-Corr(E_i, E_{i-1}) = \frac{Cov(E_{i-1}, E_i)} {\sqrt{Var(E_i)}\sqrt{Var(E_{i-1}})}
+Corr(\varepsilon_i, \varepsilon_{i-1}) = \frac{Cov(\varepsilon_{i-1}, \varepsilon_i)} {\sqrt{Var(\varepsilon_i)}\sqrt{Var(\varepsilon_{i-1}})}
 $$
 
 Assume the stationarity process where the mean and variance of the error
-term are constant over time, then 
+term are constant over time, thus
 
 $$
-Var(E_{i-1}) = Var(E_i) = Var(E_{i+1}) = ... 
+Var(\varepsilon_{i-1}) = Var(\varepsilon_i) = Var(\varepsilon_{i+1}) = ... 
 $$
 
-Recall $E_i = \phi E_{i-1} + A_i$ where $A_i\sim N(0,\sigma^2)$
+Recall $\varepsilon_i = \phi \varepsilon_{i-1} + a_i$ where $a_i\sim N(0,\sigma^2)$
 
-We can rewrite $Var(Ei) = Var(\phi E_{i-1} + A_i)$
+We can rewrite $Var(\varepsilon_i) = Var(\phi \varepsilon_{i-1} + a_i)$
 
-The variances $Var(\phi E_{i-1})$ and $Var(A_i)$ are independent so they
+The variances $Var(\phi \varepsilon_{i-1})$ and $Var(a_i)$ are independent so they
 are additive.By applying the scaling property of the variance when
 multiplied by a constant ($\phi$ is the constant), we get:
 
-$Var(Ei) = \phi^2Var(E_{i-1}) + Var(A_i)$
+$Var(\varepsilon_i) = \phi^2Var(\varepsilon_{i-1}) + Var(a_i)$
 
-$Var(Ei) = \phi^2Var(E_i) + \sigma^2$
+$Var(\varepsilon_i) = \phi^2Var(\varepsilon_i) + \sigma^2$
 
 $$
-Var(Ei) = \frac{\sigma^2} {(1-\phi^2)}
+Var(\varepsilon_i) = \frac{\sigma^2} {(1-\phi^2)}
 $$
 
-While $Cov(E_{i-1}, E_i) = Cov(E_{i-1}, \phi E_{i-1}+A_i,)$
+While $Cov(\varepsilon_{i-1}, \varepsilon_i) = Cov(\varepsilon_{i-1}, \phi \varepsilon_{i-1}+a_i,)$
 
 Applying the linearity of covariance :
 
-$Cov(E_{i-1}, E_i) = Cov(\phi E_{i-1}, E_{i-1})+ Cov(A_i, E_{i-1})$
+$Cov(\varepsilon_{i-1}, \varepsilon_i) = Cov(\phi \varepsilon_{i-1}, \varepsilon_{i-1})+ Cov(a_i, \varepsilon_{i-1})$
 
-$Cov(E_{i-1}, E_i) = \phi Cov(E_{i-1}, E_{i-1})+ Cov(A_i, E_{i-1})$
+$Cov(\varepsilon_{i-1}, \varepsilon_i) = \phi Cov(\varepsilon_{i-1}, \varepsilon_{i-1})+ Cov(a_i, \varepsilon_{i-1})$
 
-As $A_i$ are noise , the $Cov(A_i, E_{i-1})$ =0
+As $a_i$ are noise , the $Cov(a_i, \varepsilon_{i-1})$ =0
 
-$Cov(E_{i-1}, E_i) = \phi Cov(E_{i-1}, E_{i-1})$
+$Cov(\varepsilon_{i-1}, \varepsilon_i) = \phi Cov(\varepsilon_{i-1}, \varepsilon_{i-1})$
 
-$Cov(E_{i-1}, E_i) = \phi Var(E_{i-1})$
+$Cov(\varepsilon_{i-1}, \varepsilon_i) = \phi Var(\varepsilon_{i-1})$
 
-Recall $Var(E_{i-1}) = Var(E_i) = \frac {\sigma^2}{(1-\phi^2)}$
+Recall $Var(\varepsilon_{i-1}) = Var(\varepsilon_i) = \frac {\sigma^2}{(1-\phi^2)}$
 
 Then
 
 $$
-Cov(E_{i-1}, E_i) = \phi \frac{\sigma^2} {(1-\phi^2)}
+Cov(\varepsilon_{i-1}, \varepsilon_i) = \phi \frac{\sigma^2} {(1-\phi^2)}
 $$
 
 Recall,
 
 $$
-Corr(E_i, E{i-1}) = \frac{Cov(E_{i-1}, E_i)} {\sqrt{Var(E_i)}\sqrt{Var(E_{i-1}})}
+Corr(\varepsilon_i, E{i-1}) = \frac{Cov(\varepsilon_{i-1}, \varepsilon_i)} {\sqrt{Var(\varepsilon_i)}\sqrt{Var(\varepsilon_{i-1}})}
 $$
 
 $$
-\text{Corr}(E_i, E_{i-1}) = \frac{\phi \frac{\sigma^2}{1-\phi^2}}{\sqrt{\frac{\sigma^2}{1-\phi^2}} \sqrt{\frac{\sigma^2}{1-\phi^2}}}
+\text{Corr}(\varepsilon_i, \varepsilon_{i-1}) = \frac{\phi \frac{\sigma^2}{1-\phi^2}}{\sqrt{\frac{\sigma^2}{1-\phi^2}} \sqrt{\frac{\sigma^2}{1-\phi^2}}}
 $$
 
 $$
-Corr(E_i, E_{i-1}) = \phi
+Corr(\varepsilon_i, \varepsilon_{i-1}) = \phi
 $$
+
+Therefore, the parameter $\phi$ is also the correlation coefficient. 
 
 The lag k autocorrelation is given by $p_k = \phi^k$ for $k =1,2,...,$
 this equation is called the autocorrelation function.
 
-The lag one autocorrelation is given by :
+Then , the lag one autocorrelation is as follow :
 
 $$
-p_1 = Corr(E_i, E_{i-1}) 
+p_1 = Corr(\varepsilon_i, \varepsilon_{i-1}) 
 $$
 
 $$
@@ -121,53 +119,57 @@ The Durbin-Watson Test only checks for autocorrelation with a lag of 1.
 Given the Durbin-Watson test statistic :
 
 $$
-d = \frac{\Sigma_ {i=1}^{n}(E_{i+1}-E_{i})^2}{\Sigma_{i=1}^{n} E_i^2}
+d = \frac{\Sigma_ {i=1}^{n}(\varepsilon_{i+1}-\varepsilon_{i})^2}{\Sigma_{i=1}^{n} \varepsilon_i^2}
 $$
 
-Let us express $d$ as a function of the correlation coefficient $\phi$.
+Let us express $d$ as a function of the approximation of the correlation coefficient  $\hat{\phi}$.
 
 Recall:
 
-$E_{i+1}$ = $\phi E_{i} + A_i$ , $A_i \sim N(0,\sigma^2)$
+$\varepsilon_{i+1}$ = $\phi \varepsilon_{i} + a_i$ , $a_i \sim N(0,\sigma^2)$
 
 This relationship resembles a typical linear regression form:
 
-$y_i$ = $B_1 x_{i} + E_i$ , $E_i \sim N(0,\sigma^2)$
+$y_i$ = $\beta_1 x_{i} + \varepsilon_i$ , $\varepsilon_i \sim N(0,\sigma^2)$
 
 We can estimate $\phi$ by using the Ordinary Least Squares regression to
 approximate the slope :
 
 $$
-\hat{\phi}  = \frac{\Sigma_{i=1}^{n}(E_i - \bar{E})(E_{i+1} - \bar{E})}{\Sigma_{i=1}^{n}(E_i - \bar{E})^2}
+\hat{\phi}  = \frac{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{\varepsilon})(\varepsilon_{i+1} - \bar{\varepsilon})}{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{\varepsilon})^2}
 $$
 
-We know that the expected value of the error terms $E_i$ is 0 then :
+Notice that this approximation is the correlation coefficient between $\varepsilon_i$ and $\varepsilon_{i+1}$ formula where $\bar{\varepsilon_i}$ = $\bar{\varepsilon_{i+1}}$ and $Var(\varepsilon_i)$ = $Var(\varepsilon_{i+1})$  (Stationarity)
+
+
+
+We know that the expected value of the error terms $\varepsilon_i$ is 0 then :
 
 $$
-\hat{\phi} = \frac{\Sigma_{i=1}^{n} E_iE_{i+1}}{\Sigma_{i=1}^{n} E_i^2}
+\hat{\phi} = \frac{\Sigma_{i=1}^{n} \varepsilon_i\varepsilon_{i+1}}{\Sigma_{i=1}^{n} \varepsilon_i^2}
 $$
 
 The developed form of the Durbin-Watson statistic is as follow :
 
 $$
-d = \frac{\Sigma_{i=1}^{n} (E_{i}^2-2E_iE_{i+1}+E_{i+1}^2)}{\Sigma_{i=1}^{n} E_i^2}
+d = \frac{\Sigma_{i=1}^{n} (\varepsilon_{i}^2-2\varepsilon_i\varepsilon_{i+1}+\varepsilon_{i+1}^2)}{\Sigma_{i=1}^{n} \varepsilon_i^2}
 $$
 
 $$
-d = \frac{\Sigma_{i=1}^{n} (E_{i+1}^2)}{\Sigma_{i=1}^{n}  E_i^2} + \frac{\Sigma_{i=1}^{n} (E_{i}^2)}{\Sigma_{i=1}^{n}  E_i^2} -\frac{\Sigma_{i=1}^{n} (2E_iE_{i+1})}{\Sigma_{i=1}^{n}  E_i^2}
+d = \frac{\Sigma_{i=1}^{n} (\varepsilon_{i+1}^2)}{\Sigma_{i=1}^{n}  \varepsilon_i^2} + \frac{\Sigma_{i=1}^{n} (\varepsilon_{i}^2)}{\Sigma_{i=1}^{n}  \varepsilon_i^2} -\frac{\Sigma_{i=1}^{n} (2\varepsilon_i\varepsilon_{i+1})}{\Sigma_{i=1}^{n}  \varepsilon_i^2}
 $$
 
 For large n ,
-${\Sigma_{i=1}^{n} (E_{i+1}^2)}\approx\Sigma_{i=1}^{n} E_i^2$
+${\Sigma_{i=1}^{n} (\varepsilon_{i+1}^2)}\approx\Sigma_{i=1}^{n} \varepsilon_i^2$
 
 Then , we get :
 
 $$
-d\approx 2  -\frac{\Sigma_{i=1}^{n}(2E_iE_{i+1})}{\Sigma_{i=1}^{n} E_i^2} 
+d\approx 2  -\frac{\Sigma_{i=1}^{n}(2\varepsilon_i\varepsilon_{i+1})}{\Sigma_{i=1}^{n} \varepsilon_i^2} 
 $$
 
 $$
-d\approx 2(1-\frac{\Sigma_{i=1}^{n} E_iE_{i+1}}{\Sigma_{i=1}^{n} E_i^2})
+d\approx 2(1-\frac{\Sigma_{i=1}^{n} \varepsilon_i\varepsilon_{i+1}}{\Sigma_{i=1}^{n} \varepsilon_i^2})
 $$
 
 $$
@@ -230,7 +232,7 @@ dwtest(model)
 We see that the test statistics is d = 0.4116 which is close to 0,hence
 $\phi$ approaches 1, and the p-value is less than the significance level
 0.05. Then we reject the null hypothesis $H_0 : \phi$ = 0 and we
-conclude that the errors $E_i$ are correlated.
+conclude that the errors $\varepsilon_i$ are correlated.
 
 To further investigate, let us examine the ACF plot
 
@@ -274,29 +276,29 @@ uncorrelated residuals.
 
 Starting with the initial linear regression model :
 
-$y_i = B_0 + B_1 x_i + E_i$ and $E_i = \phi E_{i-1} + A_i$ , where $A_i\sim (0, \sigma^2)$
+$y_i = \beta_0 + \beta_1 x_i + \varepsilon_i$ and $\varepsilon_i = \phi \varepsilon_{i-1} + a_i$ , where $a_i\sim (0, \sigma^2)$
 
 By substituting :
 
 $y_i' = y_i - \phi y_{i-1}$
 
-$y_i' = (B_0 + B_1x_i +E_i) - \phi(B_0 + B_1x_{i-1} +E_{i-1})$
+$y_i' = (\beta_0 + \beta_1x_i +\varepsilon_i) - \phi(\beta_0 + \beta_1x_{i-1} +\varepsilon_{i-1})$
 
-$y_i' = B_0 (1-\phi) + B_1(x_i -\phi x_{i-1}) + E_i-\phi E{i-1}$
+$y_i' = \beta_0 (1-\phi) + \beta_1(x_i -\phi x_{i-1}) + \varepsilon_i-\phi E{i-1}$
 
 Thus,
 
 $$
-y_i' = B_0 (1-\phi) + B_1x_i' + A_i
+y_i' = \beta_0 (1-\phi) + \beta_1x_i' + a_i
 $$
 
-Here, $A_i$ represents residuals that are uncorrelated and exhibit
+Here, $a_i$ represents residuals that are uncorrelated and exhibit
 constant variance (white noise).
 
-Additionally, $B_0' = B_0 (1-\phi)$ represents the transformed y
+Additionally, $\beta_0' = \beta_0 (1-\phi)$ represents the transformed y
 intercept, enhancing the model’s performance.
 
-$\phi$ will be approximated by using $p_1 = corr(E_i, E{i-1})$
+$\phi$ will be approximated by using $p_1 = corr(\varepsilon_i, E{i-1})$
 
 ``` r
 par(mfrow=c(1,2))
@@ -345,5 +347,5 @@ dwtest(model2)
 The test statistic d is now closer to 2, which suggests a correlation
 coefficient $\phi \approx 0$. In addition, the p-value is greater than
 the significance level of 0.05,then we fail to reject the null
-hypothesis $H_0 : \phi$ = 0 and we conclude that the errors $E_i$ are
+hypothesis $H_0 : \phi$ = 0 and we conclude that the errors $\varepsilon_i$ are
 not correlated.
