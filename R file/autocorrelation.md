@@ -106,22 +106,7 @@ $$
 Corr(\varepsilon_i, \varepsilon_{i-1}) = \phi
 $$
 
-Therefore, the parameter $\phi$ is also the correlation coefficient.
-
-The lag k autocorrelation is given by $p_k = \phi^k$ for $k =1,2,...,$
-this equation is called the autocorrelation function.
-
-Thus, the lag one autocorrelation is as follow :
-
-$$
-p_1 = Corr(\varepsilon_i, \varepsilon_{i-1}) 
-$$
-
-$$
-p_1= \phi
-$$
-
-The Durbin-Watson Test only checks for autocorrelation with a lag of 1.
+Therefore, the parameter $\phi$ is also the correlation coefficient. 
 
 Given the Durbin-Watson test statistic :
 
@@ -252,6 +237,13 @@ acf(resid(model))
 ```
 
 ![](autocorrelation_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+
+The lag k autocorrelation is given by $p_k = \phi^k$ for $k =1,2,...,$
+this equation is called the autocorrelation function.
+
+The Durbin-Watson Test only checks for autocorrelation with a lag of 1.
+
 
 This plot shows the correlation of the error terms in different lags.
 The blue dotted line represents the significance level.
