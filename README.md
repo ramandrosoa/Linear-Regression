@@ -40,7 +40,6 @@ These assumptions are crucial because they ensure the validity and reliability o
 
 ## Diagnosing Assumption Violations and Remedial Measures
 While no model perfectly meets all assumptions, it is important to understand and diagnose any violations. Identifying these violations can help in informing about the model's validity and making necessary adjustments to the model or using alternative approaches to handle the violations. 
-In this context, we will apply several remedial measures, such as the Variance Stabilizing, transformation to linearize the model, the weighted least squares, variables transformation to handle autocorrelation, ridge regression and variable selection techniques to address multicollinearity. 
 
 
 
