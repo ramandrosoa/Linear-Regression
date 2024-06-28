@@ -112,7 +112,7 @@ Therefore, the parameter $\phi$ is also the correlation coefficient.
 The lag k autocorrelation is given by $p_k = \phi^k$ for $k =1,2,...,$
 this equation is called the autocorrelation function.
 
-The lag one autocorrelation is given by :
+Thus, the lag one autocorrelation is as follow :
 
 $$
 p_1 = Corr(\varepsilon_i, \varepsilon_{i-1}) 
