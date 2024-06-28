@@ -140,7 +140,7 @@ $a_i \sim N(0,\sigma^2)$
 This relationship resembles a typical linear regression form:
 
 $y_i$ = $\beta_1 x_{i} + \varepsilon_i$ , $\varepsilon_i$
-~$N(0,\sigma^2)$
+$\sim N(0,\sigma^2)$
 
 We can estimate $\phi$ by using the Ordinary Least Squares regression to
 approximate the slope :
