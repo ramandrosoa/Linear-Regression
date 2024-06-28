@@ -122,7 +122,7 @@ $$
 d = \frac{\Sigma_ {i=1}^{n}(\varepsilon_{i+1}-\varepsilon_{i})^2}{\Sigma_{i=1}^{n} \varepsilon_i^2}
 $$
 
-Let us express $d$ as a function of the correlation coefficient $\phi$.
+Let us express $d$ as a function of the approximation of the correlation coefficient  $\hat{\phi}$.
 
 Recall:
 
@@ -138,6 +138,10 @@ approximate the slope :
 $$
 \hat{\phi}  = \frac{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{\varepsilon})(\varepsilon_{i+1} - \bar{\varepsilon})}{\Sigma_{i=1}^{n}(\varepsilon_i - \bar{\varepsilon})^2}
 $$
+
+Notice that this approximation is the correlation coefficient between \varepsilon_i and \varepsilon_{i+1} formula where $Var(\varepsilon_i)$ = $\varepsilon_{i+1}$ (Stationarity)
+
+
 
 We know that the expected value of the error terms $\varepsilon_i$ is 0 then :
 
