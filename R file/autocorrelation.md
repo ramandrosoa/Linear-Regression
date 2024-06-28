@@ -38,14 +38,14 @@ correlation, which means it checks whether the residuals are correlated
 with each other across time.
 
 First, let us approximate the correlation coefficient between of $\varepsilon_i$ and
-$\varepsilon_{i-1}$ is given by:
+$\varepsilon_{i-1}$, which is given by:
 
 $$
 Corr(\varepsilon_i, \varepsilon_{i-1}) = \frac{Cov(\varepsilon_{i-1}, \varepsilon_i)} {\sqrt{Var(\varepsilon_i)}\sqrt{Var(\varepsilon_{i-1}})}
 $$
 
 Assume the stationary process where the mean and variance of the error
-term are constant over time, then
+term are constant over time, thus :
 
 $$
 Var(\varepsilon_{i-1}) = Var(\varepsilon_i) = Var(\varepsilon_{i+1}) = ... 
