@@ -25,6 +25,7 @@ $\beta_2$ are the unknown parameters :
 $$
 y_1 = \beta_1 x_{11} + \beta_2 x_{12}
 $$
+
 $$
 y_2 = \beta_1 x_{21} + \beta_2 x_{22}
 $$
@@ -34,6 +35,7 @@ $$
 $$
 10 = \beta_1 +\beta_2 
 $$
+
 $$
 20 = 2\beta_1 +2\beta_2
 $$
