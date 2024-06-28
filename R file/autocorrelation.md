@@ -12,8 +12,7 @@ Autocorrelation occurs when the errors terms $\varepsilon_i$ and
 $\varepsilon_j$ are correlated, expressed by
 $Cov(\varepsilon_i, \varepsilon_j)\neq 0$
 
-Given the simple linear regression model with first-order autoregressive
-errors :
+Given the simple linear regression model :
 
 $y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ where the error terms
 $\varepsilon_i$ are correlated.
