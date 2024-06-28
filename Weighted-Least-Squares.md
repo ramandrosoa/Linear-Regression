@@ -13,11 +13,11 @@ terms (heteroscedasticity).
 Consider the following simple linear regression model taking a sample of
 n data points $(x_i,y_i)$ :
 
-$y_i = \beta_0 + \beta_1x_i + E_i$ , $E_i \sim N(0,xi\sigma^{2})$
+$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ , $\varepsilon_i \sim N(0,xi\sigma^{2})$
 
 A priori, the variance of the residuals increased with the regressors.
 
-Then, $Var(y_i) = Var(E_i) = x_i\sigma^{2}$
+Then, $Var(y_i) = Var(\varepsilon_i) = x_i\sigma^{2}$
 
 However, the relationship between the independent variable and the
 variance of the residuals is not always as straightforward.
@@ -25,14 +25,14 @@ variance of the residuals is not always as straightforward.
 Consider $X$ as the transformation applied on the residuals to stabilize the variance, then we
 have :
 
-$Var(E_i') = Var(XE_i)$
+$Var(\varepsilon_i') = Var(X\varepsilon_i)$
 
 Applying the scaling of the variance upon multiplication with a
 constant, where $X$ is the constant :
 
-$Var(XE_i) = X^{2}Var(E_i)$
+$Var(X\varepsilon_i) = X^{2}Var(\varepsilon_i)$
 
-$Var(XE_i) = X^{2}x_i\sigma^{2}$
+$Var(X\varepsilon_i) = X^{2}x_i\sigma^{2}$
 
 As we want to get a constant variance, we will be looking for a
 transformation that will delete $x_i$,
@@ -49,36 +49,36 @@ $$
 X = \frac{1}{\sqrt{x_i}}
 $$
 
-$Var(XE_i) = (\frac{1}{x_i})x_i\sigma^{2}$
+$Var(X\varepsilon_i) = (\frac{1}{x_i})x_i\sigma^{2}$
 
-$Var(E_i') = Var(XE_i) = \sigma^{2}$
+$Var(\varepsilon_i') = Var(X\varepsilon_i) = \sigma^{2}$
 
 To stabilize the variance, we let :
 
 $$
-E_i' = XE_i = \frac{E_i}{{\sqrt{{x_i}}}} ~ N(0,\sigma^{2}), i = 1,...,n
+\varepsilon_i' = X\varepsilon_i = \frac{\varepsilon_i}{{\sqrt{{x_i}}}} ~ N(0,\sigma^{2}), i = 1,...,n
 $$
 
 Recall the original model :
 
-$y_i = \beta_0 + \beta_1x_i + E_i$
+$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$
 
 We rewrite it as follow :
 
 $\frac{y_i}{\sqrt{{x_i}}}$ = $\beta_0(\frac{1}{{\sqrt{x_i}}} )$ +
-$\beta_1x_i(\frac{1}{{\sqrt{x_i}}} )$+ $E_i'$
+$\beta_1x_i(\frac{1}{{\sqrt{x_i}}} )$+ $\varepsilon_i'$
 
 $\frac{y_i}{\sqrt{{x_i}}}$ = $\beta_0(\frac{1}{{\sqrt{x_i}}} )$ +
-$\beta_1{\sqrt{x_i}}$+ $E_i'$
+$\beta_1{\sqrt{x_i}}$+ $\varepsilon_i'$
 
 The sum of the weighted errors are given by :
 
 $$
-\Sigma_{i=1}^{n} (E_i')^{2} =  \Sigma_{i=1}^{n}(\frac{y_i}{\sqrt{{x_i}}}-\beta_0(\frac{1}{{\sqrt{x_i}}} )-\beta_1{\sqrt{x_i}} )^{2}
+\Sigma_{i=1}^{n} (\varepsilon_i')^{2} =  \Sigma_{i=1}^{n}(\frac{y_i}{\sqrt{{x_i}}}-\beta_0(\frac{1}{{\sqrt{x_i}}} )-\beta_1{\sqrt{x_i}} )^{2}
 $$
 
 $$
-\Sigma_{i=1}^{n} (E_i')^{2} = \Sigma_{i=1}^{n} (\frac{1}{x_i}) (y_i-\beta_o -\beta_1x_i)^2
+\Sigma_{i=1}^{n} (\varepsilon_i')^{2} = \Sigma_{i=1}^{n} (\frac{1}{x_i}) (y_i-\beta_o -\beta_1x_i)^2
 $$
 
 We get the following weighted least squares function which we will
