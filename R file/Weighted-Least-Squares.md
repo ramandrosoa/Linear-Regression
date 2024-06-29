@@ -1,7 +1,5 @@
 Weighted Least Squares
 ================
-Minah Ramandrosoa
-2024-06
 
 In linear regression, having a constant variance of the error terms
 $\varepsilon_i$ (homoscedasticity) is essential to ensure the validity
