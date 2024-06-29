@@ -280,7 +280,7 @@ multicollinearity and how to deal with.
 data <- data.frame(mtcars)
 ```
 
-Format :
+
 
 A data frame with 32 observations on 11 (numeric) variables.
 
