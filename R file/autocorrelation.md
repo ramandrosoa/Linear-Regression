@@ -1,7 +1,5 @@
 Autocorrelation
 ================
-Minah Ramandrosoa
-2024-06
 
 In linear regression, correlated error terms can introduce bias and
 inconsistency into the Ordinary Least Squares estimates of the
@@ -12,8 +10,7 @@ Autocorrelation occurs when the errors terms $\varepsilon_i$ and
 $\varepsilon_j$ are correlated, expressed by
 $Cov(\varepsilon_i, \varepsilon_j)\neq 0$
 
-Given the simple linear regression model with first-order autoregressive
-errors :
+Given the simple linear regression model :
 
 $y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ where the error terms
 $\varepsilon_i$ are correlated.
@@ -38,15 +35,15 @@ we can deploy a Durbin-Watson (DW) test. It tests for first order serial
 correlation, which means it checks whether the residuals are correlated
 with each other across time.
 
-The correlation coefficient between of $\varepsilon_i$ and
-$\varepsilon_{i-1}$ is given by:
+First, let us approximate the correlation coefficient between of $\varepsilon_i$ and
+$\varepsilon_{i-1}$, which is given by:
 
 $$
 Corr(\varepsilon_i, \varepsilon_{i-1}) = \frac{Cov(\varepsilon_{i-1}, \varepsilon_i)} {\sqrt{Var(\varepsilon_i)}\sqrt{Var(\varepsilon_{i-1}})}
 $$
 
 Assume the stationary process where the mean and variance of the error
-term are constant over time, then
+term are constant over time, thus :
 
 $$
 Var(\varepsilon_{i-1}) = Var(\varepsilon_i) = Var(\varepsilon_{i+1}) = ... 
@@ -107,22 +104,7 @@ $$
 Corr(\varepsilon_i, \varepsilon_{i-1}) = \phi
 $$
 
-Therefore, the parameter $\phi$ is also the correlation coefficient.
-
-The lag k autocorrelation is given by $p_k = \phi^k$ for $k =1,2,...,$
-this equation is called the autocorrelation function.
-
-The lag one autocorrelation is given by :
-
-$$
-p_1 = Corr(\varepsilon_i, \varepsilon_{i-1}) 
-$$
-
-$$
-p_1= \phi
-$$
-
-The Durbin-Watson Test only checks for autocorrelation with a lag of 1.
+Therefore, the parameter $\phi$ is also the correlation coefficient. 
 
 Given the Durbin-Watson test statistic :
 
@@ -140,7 +122,7 @@ $a_i \sim N(0,\sigma^2)$
 This relationship resembles a typical linear regression form:
 
 $y_i$ = $\beta_1 x_{i} + \varepsilon_i$ , $\varepsilon_i$
-~$N(0,\sigma^2)$
+$\sim N(0,\sigma^2)$
 
 We can estimate $\phi$ by using the Ordinary Least Squares regression to
 approximate the slope :
@@ -253,6 +235,11 @@ acf(resid(model))
 ```
 
 ![](autocorrelation_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+
+*The lag k autocorrelation is given by* $p_k = \phi^k$  *for*  $k =1,2,...,$
+*this equation is called the autocorrelation function.
+The Durbin-Watson Test only checks for autocorrelation with a lag of 1.*
 
 This plot shows the correlation of the error terms in different lags.
 The blue dotted line represents the significance level.

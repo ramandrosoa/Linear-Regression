@@ -20,24 +20,33 @@ Now, let us delve into the effects of multicollinearity.
 
 Suppose the system of equations with the independent variables
 $x_{i1} , x_{i2}$ and the dependent variable $y_i$. $\beta_1$ and
-$\beta_2$ are the unknown parameters :
+$\beta_2$ are the unknown parameters:
 
 $$
-y_1 = \beta_1x_{11} + \beta_2x_{12} \\
-y_2 = \beta_1x_{21} + \beta_2x_{22}
+y_1 = \beta_1 x_{11} + \beta_2 x_{12}
+$$
+
+$$
+y_2 = \beta_1 x_{21} + \beta_2 x_{22}
 $$
 
 - Consider this first system of equations with 2 observations :
 
 $$
-10 = \beta_1 +\beta_2 \\
+10 = \beta_1 +\beta_2 
+$$
+
+$$
 20 = 2\beta_1 +2\beta_2
 $$
 
 - And this second system of equations with 2 observations :
 
 $$
-10 = \beta_1 +\beta_2 \\
+10 = \beta_1 +\beta_2 
+$$
+
+$$
 12 = \beta_1 +2\beta_2
 $$
 
@@ -84,7 +93,10 @@ grid()
 - For the first system :
 
 $$
-10 = \beta_1 +\beta_2 \\
+10 = \beta_1 +\beta_2 
+$$
+
+$$
 20 = 2\beta_1 +2\beta_2
 $$
 
@@ -103,7 +115,10 @@ any new information.
 - For the second system :
 
 $$
-10 = \beta_1 +\beta_2 \\
+10 = \beta_1 +\beta_2 
+$$
+
+$$
 12 = \beta_1 +2\beta_2
 $$
 
@@ -113,8 +128,8 @@ is the only combination of $\beta_1$ and $\beta_2$ that simultaneously
 satisfies both equations, providing a unique solution.
 
 *Notice that if the equations derived from observations are correlated,
-it suggests that the independent variables themselves ( $x_{i1}$ and
-$x_{i2}$ ) are linearly dependent*
+it suggests that the independent variables themselves* ( $x_{i1}$ and
+$x_{i2}$ ) *are linearly dependent*
 
 **Conclusion**
 
@@ -155,8 +170,14 @@ $$
 $x_1$ and $x_2$ are scaled to unit length, that is :
 
 $$
-\bar{x_1} = \bar{x_2} = 0 \\
-x_{11}^2 + x_{21}^2 = 1 \\
+\bar{x_1} = \bar{x_2} = 0 
+$$
+
+$$
+x_{11}^2 + x_{21}^2 = 1 
+$$
+
+$$
 x_{12}^2 + x_{22}^2 = 1
 $$
 
@@ -169,8 +190,14 @@ $$
 and
 
 $$
-\Sigma_{i=1}^2x_{i1}x_{i2} = x_{11}x_{12} + x_{21}x_{22} \\
-\Sigma_{i=1}^2x_{i1}^2 = x_{11}^2 + x_{21}^2 =1 \\
+\Sigma_{i=1}^2x_{i1}x_{i2} = x_{11}x_{12} + x_{21}x_{22}
+$$
+
+$$
+\Sigma_{i=1}^2x_{i1}^2 = x_{11}^2 + x_{21}^2 =1
+$$
+
+$$
 \Sigma_{i=1}^2x_{i2}^2 = x_{12}^2 + x_{22}^2 =1
 $$
 
@@ -235,7 +262,7 @@ $$
 
 We know that there is a strong correlation when the correlation
 coefficient $r$ is close to 1 or -1, thus when the correlation
-coefficient $r$ between $x_1$ and $x_2$ is close to 1, the variances
+coefficient $r$ between $x_1$ and $x_2$ is close to 1 or -1, the variances
 $Var(\hat{\beta_1})$ and $Var(\hat{\beta_2})$ will tend to infinity.
 
 Therefore, we can conclude a strong correlation between the variables
@@ -253,7 +280,7 @@ multicollinearity and how to deal with.
 data <- data.frame(mtcars)
 ```
 
-Format :
+
 
 A data frame with 32 observations on 11 (numeric) variables.
 
@@ -392,9 +419,10 @@ close to -1 or +1 suggest that there is a relationship between the 2
 compared variables.
 
 The scatter plot and the covariance matrix are both bivariate method
-that compares the dependency of one variable to one another We can try
-another way to check out the correlation between each variable, such as
-using the R squared and the Variance Inflation Factors (VIF)
+that compares the dependency of one variable to one another.
+
+We can try another way to check out the correlation between each variable, such as
+using the $R^2$ and the Variance Inflation Factors (VIF)
 
 ### The coefficient of determination
 
@@ -518,12 +546,11 @@ Through the previous analysis, we found out that multicollinearity
 inflate the variance of the parameter estimates, making them unstable
 and less reliable.
 
-The Ridge Regression also known as L2 Regularization helps to shrinks
+The Ridge Regression also known as L2 Regularization helps to shrink
 the estimated coefficients towards zero to fix the magnitude inflation
 by adding a ***small bias***.
 
-This small bias will be added to the loss function that we will minimize
-:
+This small bias will be added to the cost function that we will minimize:
 
 $$
 S = \Sigma_{i=1}^n (y_i-\beta_0-\Sigma_{k=1}^j \beta_k)^2 + \lambda\Sigma_{k=1}^j (\beta_k)^2
@@ -564,7 +591,7 @@ select(fit)
     ## modified L-W estimator is 0.8695482 
     ## smallest value of GCV  at 4.47
 
-**The selection of $\lambda$ will be done by using the smallest value of
+**The selection of** $\lambda$ **will be done by using the smallest value of
 Generalized Cross Validation (GCV) value.**
 
 ``` r

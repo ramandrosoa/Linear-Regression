@@ -8,17 +8,17 @@ To set up a linear regression model correctly, it is essential to ensure that th
   - Linear Relationship:
 There should be a linear relationship between the dependent variable and the independent variables.
 
-Fixing solution : [Variables transformation to linearize the model](Transformation-to-linearize-the-model.md) 
+Fixing solution : [Variables transformation to linearize the model](https://github.com/ramandrosoa/Linear-Regression/blob/main/R%20file/Transformation-to-linearize-the-model.md) 
   
   - Homoscedasticity:
 The variance of the error terms should be constant across all levels of the independent variables. This means the error term $\varepsilon_i$ should be the same for any $i$. 
 
-Fixing solution : [weighted least squares](Weighted-Least-Squares.md) , variance stabilizing
+Fixing solution : [weighted least squares](https://github.com/ramandrosoa/Linear-Regression/blob/main/R%20file/Weighted-Least-Squares.md) , variance stabilizing
   
   - Uncorrelated error terms:
 The covariance of $\varepsilon_i$ and $\varepsilon_j$, for $i\neq j$, should be 0.
 
-Fixing solution : [Variables transformation to handle autocorrelation](autocorrelation.md)
+Fixing solution : [Variables transformation to handle autocorrelation](https://github.com/ramandrosoa/Linear-Regression/blob/main/R%20file/autocorrelation.md)
   
   - Normality of Errors:
 The error terms $\varepsilon_i$ should follow a Gaussian distribution.
@@ -28,7 +28,7 @@ Fixing solution : Box-Cox transformation
   - Linear Independence of the Regressors:
 The regressors should not be highly correlated to each other.
 
-Fixing solution : [Ridge regression](Multicollinearity-part1.md), variables selection
+Fixing solution : [Ridge regression](https://github.com/ramandrosoa/Linear-Regression/blob/main/R%20file/Multicollinearity-part1.md) , variables selection
    
 
 ## Importance of These Assumptions

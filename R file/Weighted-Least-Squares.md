@@ -1,7 +1,5 @@
 Weighted Least Squares
 ================
-Minah Ramandrosoa
-2024-06
 
 In linear regression, having a constant variance of the error terms
 $\varepsilon_i$ (homoscedasticity) is essential to ensure the validity
@@ -15,12 +13,7 @@ terms(heteroscedasticity).
 Consider the following simple linear regression model taking a sample of
 n data points $(x_i,y_i)$ :
 
-<<<<<<< HEAD:R file/Weighted-Least-Squares.md
-$y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ ,
-$\varepsilon_i \sim N(0,xi\sigma^{2})$
-=======
 $y_i = \beta_0 + \beta_1x_i + \varepsilon_i$ , $\varepsilon_i \sim N(0,x_i\sigma^{2})$
->>>>>>> 0ff8caccabcb85fdbf85d343f5cfa56ea695af70:Weighted-Least-Squares.md
 
 A priori, the variance of the residuals increased with the regressors.
 
