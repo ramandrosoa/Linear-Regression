@@ -36,11 +36,11 @@ The appropriate transformation $h()$ is applied on $y$ by considering
 the function $g()$ which defines the dependence of the variance $Var(e)$
 to the mean $µ$.
 
-In order to find the function $h()$, we are going to approximate it by
-using the first order of the Taylor series around the mean $µ$.
+**In order to find the function $h()$, we are going to approximate it by
+using the first order of the Taylor series around the mean** $µ$.
 
-The Taylor series is a powerful tool for approximating functions near a
-point.
+**The Taylor series is a powerful tool for approximating functions near a
+point.**
 
 Given the Taylor expansion centered at $µ$:
 
@@ -74,8 +74,8 @@ $$
 E(h(y))\approx h(µ)
 $$
 
-The function $h$ is a transformation that will make the variance
-$Var(h(y))$ approximately constant.
+**The function $h$ is a transformation that will make the variance
+$Var(h(y))$ approximately constant.**
 
 Then, let us approximate the $Var(h(y))$
 
@@ -336,10 +336,10 @@ We notice that $Var(e) = [E(y)]^2$ and $Var(e) = [E(y)]^3$ and
 $Var(e) = [E(y)]^4$ are quite similar to our actual variance and mean
 relationship.
 
-It is important to highlight that the variance-stabilizing
+**It is important to highlight that the variance-stabilizing
 transformation is empirical and is a trial-and-error procedure. Then we
 have to figure out which of these cases will remediate to the
-heteroscedasticity.
+heteroscedasticity.**
 
 Here are the transformations that we are going to apply :
 
