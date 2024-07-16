@@ -1,7 +1,5 @@
 Variance Stabilizing
 ================
-Minah Ramandrosoa
-2024-07
 
 The variance stabilizing transformation is one way to remediate to the
 heteroscedasticity.
@@ -119,8 +117,8 @@ $$
 E(h(y)) \approx h(µ) \approx \int \sqrt{\frac{1}{g(µ)}}dµ
 $$
 
-***Here are some functions $h()$ applied on $y$ depending on the common
-relationships $g()$ between the variance and the mean:***
+***Here are some functions*** $h()$ ***applied on*** $y$ ***depending on the common
+relationships*** $g()$ ***between the variance and the mean:***
 
 **1. $g(µ) = µ$**
 
