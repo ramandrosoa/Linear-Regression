@@ -23,7 +23,7 @@ Fixing solution : [Variables transformation to handle autocorrelation](https://g
   - Normality of Errors:
 The error terms $\varepsilon_i$ should follow a Gaussian distribution.
 
-Fixing solution : Box-Cox transformation
+Fixing solution : [Box-Cox transformation](https://github.com/ramandrosoa/Linear-Regression/blob/main/R%20file/Box_Cox.md)
   
   - Linear Independence of the Regressors:
 The regressors should not be highly correlated to each other.

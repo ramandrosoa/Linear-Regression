@@ -1,7 +1,6 @@
 Box-Cox Transformation
 ================
-Minah
-2024-06
+
 
 The Box Cox transformation may be useful to transform a skewed
 distribution into a more symmetrical one.
