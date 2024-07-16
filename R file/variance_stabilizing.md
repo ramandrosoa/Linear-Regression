@@ -424,7 +424,7 @@ fit_models_with_trans(x,y)
     ## data:  model_VST
     ## BP = 3.4849, df = 1, p-value = 0.06193
 
-Since $h(y) \approx y^{-1}$ ,the p-value exceeds the significance level
+Since $h(y) \approx y^{-1}$  ,the p-value exceeds the significance level
 of 0.05, indicating with 95% confidence that the variance is constant.
 
 We fail to reject the Null Hypothesis, providing sufficient evidence for
