@@ -41,6 +41,11 @@ These assumptions are crucial because they ensure the validity and reliability o
 ## Diagnosing Assumption Violations and Remedial Measures
 While no model perfectly meets all assumptions, it is important to understand and diagnose any violations. Identifying these violations can help in informing about the model's validity and making necessary adjustments to the model or using alternative approaches to handle the violations. 
 
+## References
+
+MATH 764 Linear Regression - Illinois Institute of Technology 
+MATH 765 Model diagnostics - Illinois Institute of Technology 
+
 
 
 
