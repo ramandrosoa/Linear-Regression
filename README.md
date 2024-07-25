@@ -46,6 +46,7 @@ While no model perfectly meets all assumptions, it is important to understand an
   - MATH 764 Linear Regression, Illinois Institute of Technology 
   - MATH 765 Model diagnostics, Illinois Institute of Technology
   - Journal of Applied Statistics, S.Chinn
+  - [Maximum Likelihood Estimation, Imperial College London](https://www.ma.imperial.ac.uk/~das01/MyWeb/M2S1Previous/2004/Handouts/Mle.pdf)
 
 
 
