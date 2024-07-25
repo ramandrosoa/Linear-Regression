@@ -43,8 +43,8 @@ While no model perfectly meets all assumptions, it is important to understand an
 
 ## References
 
-MATH 764 Linear Regression - Illinois Institute of Technology 
-MATH 765 Model diagnostics - Illinois Institute of Technology 
+  - MATH 764 Linear Regression, Illinois Institute of Technology 
+  - MATH 765 Model diagnostics, Illinois Institute of Technology 
 
 
 
